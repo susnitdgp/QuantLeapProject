@@ -11,11 +11,14 @@ namespace QuantConnect.Algorithm.CSharp
         public override void Initialize()
         {
             if (LiveMode) throw new InvalidOperationException("Backtest only");
-            SetTimeZone("Asia/Kolkata");
             SetAccountCurrency("INR");
+            SetTimeZone("Asia/Kolkata");
+            
             SetStartDate(2019, 7, 9);
             SetEndDate(2019, 7, 11);
             SetCash(100000);
+
+            
             var security = AddEquity("YESBANK", Resolution.Minute, Market.India, fillForward: false, dataNormalizationMode: DataNormalizationMode.Raw);
             _symbol = security.Symbol;
             SetBenchmark(_symbol);
