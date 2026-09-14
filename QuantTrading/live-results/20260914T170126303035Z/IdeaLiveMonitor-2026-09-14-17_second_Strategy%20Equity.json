@@ -1,0 +1,18 @@
+{
+  "holdings": {
+    "IDEA UL": {
+      "c": "₹"
+    }
+  },
+  "charts": {
+    "Strategy Equity": {
+      "name": "Strategy Equity",
+      "chartType": 0,
+      "series": {
+        "Equity": {"name":"Equity","unit":"$","index":0,"seriesType":2,"values":[[1789405291,0.0,0.0,0.0,0.0]]},
+        "Return": {"name":"Return","unit":"%","index":1,"seriesType":3,"values":[],"color":"","scatterMarkerSymbol":"none"}
+      }
+    }
+  },
+  "orders": {}
+}
