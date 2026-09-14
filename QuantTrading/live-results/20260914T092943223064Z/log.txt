@@ -1,0 +1,12 @@
+2026-09-14T09:29:45.1972295Z TRACE:: Engine.Main(): LEAN ALGORITHMIC TRADING ENGINE v2.5.0.0 Mode: DEBUG (64bit) Host: vmi3506951
+2026-09-14T09:29:45.2116941Z TRACE:: Engine.Main(): Started 14:59
+2026-09-14T09:29:45.2448678Z TRACE:: JobQueue.NextJob(): Selected QuantTrading.Algorithms.dll
+2026-09-14T09:29:46.3435145Z TRACE:: AlgorithmManager.CreateTokenBucket(): Initializing LeakyBucket: Capacity: 120 RefillAmount: 18 TimeInterval: 1440
+2026-09-14T09:29:46.3568491Z TRACE:: Engine.Run(): Resource limits '0' CPUs. 2147483647 MB RAM.
+2026-09-14T09:29:46.3573605Z TRACE:: TextSubscriptionDataSourceReader.SetCacheSize(): Setting cache size to 71582788 items
+2026-09-14T09:29:46.3645030Z TRACE:: Loader.TryCreateILAlgorithm(): Loading only the algorithm assembly
+2026-09-14T09:29:46.7076388Z TRACE:: Loader.TryCreateILAlgorithm(): Loaded IdeaLiveMonitor
+2026-09-14T09:29:46.7157712Z TRACE:: LocalObjectStore.Initialize(): Storage Root: /root/QuantTrading/Runner/bin/Release/net10.0/storage. StorageFileCount 10000. StorageLimit 10240MB. StoragePermissions Read=True Write=True Delete=True
+2026-09-14T09:29:46.7162266Z TRACE:: LiveTradingDataFeed.GetDataChannelProvider(): will use DataChannelProvider
+2026-09-14T09:29:46.7209829Z TRACE:: BrokerageSetupHandler.CreateBrokerage(): creating brokerage 'ZerodhaBrokerage'
+2026-09-14T09:29:50.9252934Z ERROR:: ValidateSubscription(): Failed during validation, shutting down. Error : Request for subscriptions from web failed, Response Errors : Organization not found.

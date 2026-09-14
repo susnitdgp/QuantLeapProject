@@ -1,0 +1,43 @@
+2026-09-14T13:13:17.1229448Z TRACE:: Engine.Main(): LEAN ALGORITHMIC TRADING ENGINE v2.5.0.0 Mode: DEBUG (64bit) Host: vmi3506951
+2026-09-14T13:13:17.1360390Z TRACE:: Engine.Main(): Started 18:43
+2026-09-14T13:13:17.1671279Z TRACE:: JobQueue.NextJob(): Selected QuantTrading.Algorithms.dll
+2026-09-14T13:13:18.0906099Z TRACE:: AlgorithmManager.CreateTokenBucket(): Initializing LeakyBucket: Capacity: 120 RefillAmount: 18 TimeInterval: 1440
+2026-09-14T13:13:18.1011857Z TRACE:: Engine.Run(): Resource limits '0' CPUs. 2147483647 MB RAM.
+2026-09-14T13:13:18.1018803Z TRACE:: TextSubscriptionDataSourceReader.SetCacheSize(): Setting cache size to 71582788 items
+2026-09-14T13:13:18.1108921Z TRACE:: Loader.TryCreateILAlgorithm(): Loading only the algorithm assembly
+2026-09-14T13:13:18.4563649Z TRACE:: Loader.TryCreateILAlgorithm(): Loaded IdeaLiveMonitor
+2026-09-14T13:13:18.4593723Z TRACE:: LocalObjectStore.Initialize(): Storage Root: /root/LeanProject/QuantTrading/Runner/bin/Release/net10.0/storage. StorageFileCount 10000. StorageLimit 10240MB. StoragePermissions Read=True Write=True Delete=True
+2026-09-14T13:13:18.4601163Z TRACE:: LiveTradingDataFeed.GetDataChannelProvider(): will use DataChannelProvider
+2026-09-14T13:13:18.4624167Z TRACE:: BrokerageSetupHandler.CreateBrokerage(): creating brokerage 'ZerodhaBrokerage'
+2026-09-14T13:13:21.5707337Z TRACE:: ZerodhaBrokerage(): Zerodha Brokerage initialized
+2026-09-14T13:13:21.5847722Z TRACE:: CompositeDataQueueHandler.SetJob(): will use [
+  "ZerodhaBrokerage"
+]
+2026-09-14T13:13:21.5865190Z TRACE:: ZerodhaBrokerage.Connect(): Connecting...
+2026-09-14T13:13:21.5890041Z TRACE:: WebSocketClientWrapper connection task started: wss://ws.kite.trade/?api_key=mmtsd2ptc5pdmd8t&access_token=mZ50G4zwjtj1n06kCS2erjGpn5HcWmtW
+2026-09-14T13:13:21.5903373Z TRACE:: WebSocketClientWrapper.HandleConnection(wss://ws.kite.trade/?api_key=mmtsd2ptc5pdmd8t&access_token=mZ50G4zwjtj1n06kCS2erjGpn5HcWmtW): Connecting...
+2026-09-14T13:13:21.6556761Z ERROR:: WebSocketClientWrapper.OnError(): WebSocketClientWrapper.OnError(): (IsOpen:False, State:Closed): wss://ws.kite.trade/?api_key=mmtsd2ptc5pdmd8t&access_token=mZ50G4zwjtj1n06kCS2erjGpn5HcWmtW: The server returned status code '403' when status code '101' was expected. System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at QuantConnect.Extensions.SynchronouslyAwaitTask(Task task)
+   at QuantConnect.Brokerages.WebSocketClientWrapper.HandleConnection()
+2026-09-14T13:13:21.6564434Z ERROR:: ZerodhaBrokerage.OnError(): Message: The server returned status code '403' when status code '101' was expected. Exception: System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at QuantConnect.Extensions.SynchronouslyAwaitTask(Task task)
+   at QuantConnect.Brokerages.WebSocketClientWrapper.HandleConnection()
+2026-09-14T13:13:23.6714146Z ERROR:: WebSocketClientWrapper.OnError(): WebSocketClientWrapper.OnError(): (IsOpen:False, State:Closed): wss://ws.kite.trade/?api_key=mmtsd2ptc5pdmd8t&access_token=mZ50G4zwjtj1n06kCS2erjGpn5HcWmtW: The server returned status code '403' when status code '101' was expected. System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at QuantConnect.Extensions.SynchronouslyAwaitTask(Task task)
+   at QuantConnect.Brokerages.WebSocketClientWrapper.HandleConnection()
+2026-09-14T13:13:23.6716893Z ERROR:: ZerodhaBrokerage.OnError(): Message: The server returned status code '403' when status code '101' was expected. Exception: System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at QuantConnect.Extensions.SynchronouslyAwaitTask(Task task)
+   at QuantConnect.Brokerages.WebSocketClientWrapper.HandleConnection()
+2026-09-14T13:13:24.4810801Z TRACE:: Program.ExitKeyPress(): Lean instance has been cancelled, shutting down safely now

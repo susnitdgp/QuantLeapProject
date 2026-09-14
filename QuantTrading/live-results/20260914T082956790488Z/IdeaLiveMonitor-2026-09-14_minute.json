@@ -1,0 +1,44 @@
+{
+  "holdings": {},
+  "cash": {
+    "USD": {
+      "securitySymbols": [],
+      "symbol": "USD",
+      "amount": 0.0,
+      "conversionRate": 1.0,
+      "currencySymbol": "$",
+      "valueInAccountCurrency": 0.0
+    }
+  },
+  "accountCurrency": "USD",
+  "accountCurrencySymbol": "$",
+  "charts": {},
+  "orders": {},
+  "profitLoss": {},
+  "statistics": {},
+  "runtimeStatistics": {},
+  "state": {
+    "StartTime": "2026-09-14T08:29:59Z",
+    "EndTime": "2026-09-14T08:30:00Z",
+    "RuntimeError": "Algorithm.Initialize() Error: Object reference not set to an instance of an object. Stack Trace: System.NullReferenceException: Object reference not set to an instance of an object.\n   at KiteConnect.WebSocket.Close(Boolean Abort)\n   at KiteConnect.Ticker.Close()\n   at QuantTrading.KiteBrokerage.KiteSession.Disconnect() in /root/QuantTrading/KiteBrokerage/KiteSession.cs:line 62\n   at QuantTrading.KiteBrokerage.KiteLeanBrokerage.Disconnect() in /root/QuantTrading/KiteBrokerage/KiteLeanBrokerage.cs:line 107\n   at QuantTrading.KiteBrokerage.KiteLeanBrokerage.Connect() in /root/QuantTrading/KiteBrokerage/KiteLeanBrokerage.cs:line 99\n   at QuantConnect.Lean.Engine.HistoricalData.BrokerageHistoryProvider.Initialize(HistoryProviderInitializeParameters parameters)\n   at QuantConnect.Lean.Engine.HistoricalData.HistoryProviderManager.Initialize(HistoryProviderInitializeParameters parameters)\n   at QuantConnect.Lean.Engine.Engine.Run(AlgorithmNodePacket job, AlgorithmManager manager, String assemblyPath, WorkerThread workerThread)",
+    "StackTrace": "System.NullReferenceException: Object reference not set to an instance of an object.\n   at KiteConnect.WebSocket.Close(Boolean Abort)\n   at KiteConnect.Ticker.Close()\n   at QuantTrading.KiteBrokerage.KiteSession.Disconnect() in /root/QuantTrading/KiteBrokerage/KiteSession.cs:line 62\n   at QuantTrading.KiteBrokerage.KiteLeanBrokerage.Disconnect() in /root/QuantTrading/KiteBrokerage/KiteLeanBrokerage.cs:line 107\n   at QuantTrading.KiteBrokerage.KiteLeanBrokerage.Connect() in /root/QuantTrading/KiteBrokerage/KiteLeanBrokerage.cs:line 99\n   at QuantConnect.Lean.Engine.HistoricalData.BrokerageHistoryProvider.Initialize(HistoryProviderInitializeParameters parameters)\n   at QuantConnect.Lean.Engine.HistoricalData.HistoryProviderManager.Initialize(HistoryProviderInitializeParameters parameters)\n   at QuantConnect.Lean.Engine.Engine.Run(AlgorithmNodePacket job, AlgorithmManager manager, String assemblyPath, WorkerThread workerThread)",
+    "LogCount": "1",
+    "OrderCount": "0",
+    "InsightCount": "0",
+    "Hostname": "vmi3506951",
+    "Status": "RuntimeError"
+  },
+  "serverStatistics": {},
+  "algorithmConfiguration": {
+    "name": null,
+    "tags": null,
+    "brokerage": 0,
+    "accountType": 0,
+    "parameters": null,
+    "outOfSampleMaxEndDate": null,
+    "outOfSampleDays": 0,
+    "startDate": "0001-01-01T00:00:00Z",
+    "endDate": "0001-01-01T00:00:00Z",
+    "tradingDaysPerYear": 252
+  }
+}

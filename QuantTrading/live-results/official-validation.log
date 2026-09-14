@@ -1,0 +1,35 @@
+  Determining projects to restore...
+/root/QuantTrading/Runner/QuantTrading.Runner.csproj : warning NU1903: Package 'DotNetZip' 1.16.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-xhg6-9j5j-w4vf
+/root/QuantTrading/Algorithms/QuantTrading.Algorithms.csproj : warning NU1903: Package 'DotNetZip' 1.16.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-xhg6-9j5j-w4vf [/root/QuantTrading/Runner/QuantTrading.Runner.csproj]
+  All projects are up-to-date for restore.
+/root/QuantTrading/Runner/QuantTrading.Runner.csproj : warning NU1903: Package 'DotNetZip' 1.16.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-xhg6-9j5j-w4vf
+/root/QuantTrading/Algorithms/QuantTrading.Algorithms.csproj : warning NU1903: Package 'DotNetZip' 1.16.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-xhg6-9j5j-w4vf
+  QuantTrading.Algorithms -> /root/QuantTrading/Algorithms/bin/Release/net10.0/QuantTrading.Algorithms.dll
+  QuantTrading.Runner -> /root/QuantTrading/Runner/bin/Release/net10.0/QuantTrading.Runner.dll
+
+Build succeeded.
+
+/root/QuantTrading/Runner/QuantTrading.Runner.csproj : warning NU1903: Package 'DotNetZip' 1.16.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-xhg6-9j5j-w4vf
+/root/QuantTrading/Algorithms/QuantTrading.Algorithms.csproj : warning NU1903: Package 'DotNetZip' 1.16.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-xhg6-9j5j-w4vf [/root/QuantTrading/Runner/QuantTrading.Runner.csproj]
+/root/QuantTrading/Runner/QuantTrading.Runner.csproj : warning NU1903: Package 'DotNetZip' 1.16.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-xhg6-9j5j-w4vf
+/root/QuantTrading/Algorithms/QuantTrading.Algorithms.csproj : warning NU1903: Package 'DotNetZip' 1.16.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-xhg6-9j5j-w4vf
+    4 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.98
+Build/config check passed. Credentials present; broker authentication not checked.
+20260914 09:33:42.773 TRACE:: Using /tmp/quanttrading-live-bv1bi_h7/config.json as configuration file
+20260914 09:33:42.881 TRACE:: Composer(): Loading Assemblies from /root/QuantTrading/Runner/bin/Release/net10.0/
+20260914 09:33:43.555 TRACE:: Python for .NET Assembly: Python.Runtime, Version=2.0.65.0, Culture=neutral, PublicKeyToken=5000fea6cba702dd
+20260914 09:33:44.567 TRACE:: Engine.Main(): LEAN ALGORITHMIC TRADING ENGINE v2.5.0.0 Mode: DEBUG (64bit) Host: vmi3506951
+20260914 09:33:44.579 TRACE:: Engine.Main(): Started 15:03
+20260914 09:33:44.608 TRACE:: JobQueue.NextJob(): Selected QuantTrading.Algorithms.dll
+20260914 09:33:45.514 TRACE:: AlgorithmManager.CreateTokenBucket(): Initializing LeakyBucket: Capacity: 120 RefillAmount: 18 TimeInterval: 1440
+20260914 09:33:45.529 TRACE:: Engine.Run(): Resource limits '0' CPUs. 2147483647 MB RAM.
+20260914 09:33:45.530 TRACE:: TextSubscriptionDataSourceReader.SetCacheSize(): Setting cache size to 71582788 items
+20260914 09:33:45.536 TRACE:: Loader.TryCreateILAlgorithm(): Loading only the algorithm assembly
+20260914 09:33:45.846 TRACE:: Loader.TryCreateILAlgorithm(): Loaded IdeaLiveMonitor
+20260914 09:33:45.848 TRACE:: LocalObjectStore.Initialize(): Storage Root: /root/QuantTrading/Runner/bin/Release/net10.0/storage. StorageFileCount 10000. StorageLimit 10240MB. StoragePermissions Read=True Write=True Delete=True
+20260914 09:33:45.849 TRACE:: LiveTradingDataFeed.GetDataChannelProvider(): will use DataChannelProvider
+20260914 09:33:45.851 TRACE:: BrokerageSetupHandler.CreateBrokerage(): creating brokerage 'ZerodhaBrokerage'
+20260914 09:33:50.001 ERROR:: ValidateSubscription(): Failed during validation, shutting down. Error : Request for subscriptions from web failed, Response Errors : Organization not found.

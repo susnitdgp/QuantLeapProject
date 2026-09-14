@@ -1,0 +1,83 @@
+{
+  "holdings": {},
+  "cash": {
+    "INR": {
+      "securitySymbols": [],
+      "symbol": "INR",
+      "amount": 0.0,
+      "conversionRate": 1.0,
+      "currencySymbol": "₹",
+      "valueInAccountCurrency": 0.0
+    },
+    "USD": {
+      "securitySymbols": [
+        {
+          "value": "USDINR",
+          "id": "USDINR 8G",
+          "permtick": "USDINR"
+        }
+      ],
+      "symbol": "USD",
+      "amount": 0.0,
+      "conversionRate": 0.0,
+      "currencySymbol": "$",
+      "valueInAccountCurrency": 0.0
+    }
+  },
+  "accountCurrency": "INR",
+  "accountCurrencySymbol": "₹",
+  "charts": {
+    "Strategy Equity": {
+      "name": "Strategy Equity",
+      "chartType": 0,
+      "series": {
+        "Equity": {"name":"Equity","unit":"$","index":0,"seriesType":2,"values":[[1789373269,0.0,0.0,0.0,0.0]]}
+      }
+    }
+  },
+  "orders": {},
+  "profitLoss": {},
+  "statistics": {},
+  "runtimeStatistics": {
+    "Equity": "₹0.00",
+    "Fees": "-₹0.00",
+    "Holdings": "₹0.00",
+    "Net Profit": "₹0.00",
+    "Probabilistic Sharpe Ratio": "0%",
+    "Return": "0.00 %",
+    "Unrealized": "₹0.00",
+    "Volume": "₹0.00"
+  },
+  "state": {
+    "StartTime": "2026-09-14T08:07:44Z",
+    "EndTime": "2026-09-14T08:07:49Z",
+    "RuntimeError": "2026-09-14 13:37:48 Runtime Error: Only Market.India is supported.",
+    "StackTrace": "QuantConnect.Exceptions.SystemExceptionInterpreter+SanitizedException: Only Market.India is supported.\n   at QuantConnect.Lean.Engine.DataFeeds.DataQueueHandlerManager.Subscribe(SubscriptionDataConfig dataConfig, EventHandler newDataAvailableHandler)\n   at QuantConnect.Extensions.SubscribeWithMapping(IDataQueueHandler dataQueueHandler, SubscriptionDataConfig dataConfig, EventHandler newDataAvailableHandler, Func`2 isExpired, SubscriptionDataConfig& subscribedConfig)\n   at QuantConnect.Lean.Engine.DataFeeds.Enumerators.LiveSubscriptionEnumerator..ctor(SubscriptionDataConfig dataConfig, IDataQueueHandler dataQueueHandler, EventHandler handler, Func`2 isExpired)\n   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.Subscribe(SubscriptionDataConfig dataConfig, EventHandler newDataAvailableHandler, Func`2 isExpired)\n   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.CreateDataSubscription(SubscriptionRequest request)\n   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.CreateSubscription(SubscriptionRequest request)",
+    "LogCount": "11",
+    "OrderCount": "0",
+    "InsightCount": "0",
+    "Hostname": "vmi3506951",
+    "Status": "RuntimeError"
+  },
+  "serverStatistics": {
+    "CPU Usage": "0.0%",
+    "Used RAM (MB)": "261",
+    "Total RAM (MB)": "2147483647",
+    "Hostname": "vmi3506951",
+    "LEAN Version": "v2.5.0.0",
+    "Up Time": "0d 00:00:04"
+  },
+  "algorithmConfiguration": {
+    "name": "0-0-IdeaLiveMonitor",
+    "tags": [],
+    "accountCurrency": "INR",
+    "brokerage": 15,
+    "accountType": 0,
+    "parameters": {},
+    "outOfSampleMaxEndDate": null,
+    "outOfSampleDays": 0,
+    "startDate": "2026-09-14T00:00:00Z",
+    "endDate": "2050-12-31T00:00:00Z",
+    "tradingDaysPerYear": 252
+  }
+}

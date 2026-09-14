@@ -1,0 +1,151 @@
+2026-09-14T08:07:44.0375366Z TRACE:: Engine.Main(): LEAN ALGORITHMIC TRADING ENGINE v2.5.0.0 Mode: DEBUG (64bit) Host: vmi3506951
+2026-09-14T08:07:44.0474671Z TRACE:: Engine.Main(): Started 13:37
+2026-09-14T08:07:44.0719018Z TRACE:: JobQueue.NextJob(): Selected QuantTrading.Algorithms.dll
+2026-09-14T08:07:44.1323028Z TRACE:: JobQueue.NextJob(): Not able to fetch brokerage factory with name: KiteLeanBrokerage
+2026-09-14T08:07:44.9450433Z TRACE:: AlgorithmManager.CreateTokenBucket(): Initializing LeakyBucket: Capacity: 120 RefillAmount: 18 TimeInterval: 1440
+2026-09-14T08:07:44.9527751Z TRACE:: Engine.Run(): Resource limits '0' CPUs. 2147483647 MB RAM.
+2026-09-14T08:07:44.9533468Z TRACE:: TextSubscriptionDataSourceReader.SetCacheSize(): Setting cache size to 71582788 items
+2026-09-14T08:07:44.9594292Z TRACE:: Loader.TryCreateILAlgorithm(): Loading only the algorithm assembly
+2026-09-14T08:07:45.2526307Z TRACE:: Loader.TryCreateILAlgorithm(): Loaded IdeaLiveMonitor
+2026-09-14T08:07:45.2551333Z TRACE:: LocalObjectStore.Initialize(): Storage Root: /root/QuantTrading/Runner/bin/Release/net10.0/storage. StorageFileCount 10000. StorageLimit 10240MB. StoragePermissions Read=True Write=True Delete=True
+2026-09-14T08:07:45.2553490Z TRACE:: LiveTradingDataFeed.GetDataChannelProvider(): will use DataChannelProvider
+2026-09-14T08:07:45.2561428Z TRACE:: BrokerageSetupHandler.CreateBrokerage(): creating brokerage 'KiteLeanBrokerage'
+2026-09-14T08:07:45.2760016Z TRACE:: CompositeDataQueueHandler.SetJob(): will use [
+  "KiteLeanBrokerage"
+]
+2026-09-14T08:07:45.2777916Z TRACE:: BaseDataExchange(CustomDataExchange) Starting...
+2026-09-14T08:07:47.1540370Z TRACE:: KiteLeanBrokerage: WebSocket connected; full-mode subscriptions restored.
+2026-09-14T08:07:47.1562838Z TRACE:: KiteLeanBrokerage: authentication and instrument master loaded. Orders enabled: False
+2026-09-14T08:07:47.1580399Z TRACE:: HistoryProviderManager.Initialize(): history providers [BrokerageHistoryProvider,SubscriptionDataReaderHistoryProvider]
+2026-09-14T08:07:47.1625519Z TRACE:: BaseSetupHandler.Setup(LocalPlatform): UID: 0, PID: 0, Version: 2.5.0.0, Source: WebIDE
+2026-09-14T08:07:47.1634338Z TRACE:: LiveTradingResultHandler.SendStatusUpdate(): status: 'LoggingIn'.  Logging into brokerage...
+2026-09-14T08:07:47.1635823Z TRACE:: BrokerageSetupHandler.Setup(): Connecting to brokerage...
+2026-09-14T08:07:47.1639780Z TRACE:: BrokerageSetupHandler.Setup(): KiteLeanBrokerage account base currency: INR
+2026-09-14T08:07:47.1691202Z TRACE:: SecurityPortfolioManager.SetAccountCurrency(): setting account currency to INR
+2026-09-14T08:07:47.1691548Z TRACE:: BrokerageSetupHandler.Setup(): Initializing algorithm...
+2026-09-14T08:07:47.1693120Z TRACE:: LiveTradingResultHandler.SendStatusUpdate(): status: 'Initializing'.  Initializing algorithm...
+2026-09-14T08:07:47.2610262Z TRACE:: BrokerageSetupHandler.Setup(): Fetching cash balance from brokerage...
+2026-09-14T08:07:47.3045169Z TRACE:: BrokerageSetupHandler.Setup(): Setting INR cash to 0
+2026-09-14T08:07:47.3061096Z TRACE:: BrokerageSetupHandler.Setup(): Fetching open orders from brokerage...
+2026-09-14T08:07:47.3333693Z TRACE:: BrokerageSetupHandler.Setup(): Fetching holdings from brokerage...
+2026-09-14T08:07:47.3635990Z TRACE:: AggregationManager.Initialize(): daily strict end times: True
+2026-09-14T08:07:47.3981747Z TRACE:: LiveTradingDataFeed.CreateUniverseSubscription(): Creating user defined universe: QC-UNIVERSE-USERDEFINED-INDIA-EQUITY UL
+2026-09-14T08:07:47.4018685Z TRACE:: DataManager.AddSubscription(): Added QC-UNIVERSE-USERDEFINED-INDIA-EQUITY,#0,QC-UNIVERSE-USERDEFINED-INDIA-EQUITY,Tick,Tick,Trade,Raw,OpenInterest,Internal. Start: 09/14/2026 08:07:47. End: 12/31/2050 00:00:00
+2026-09-14T08:07:47.4286555Z TRACE:: Cash.EnsureCurrencyDataFeed(): Adding USDINR oanda for cash USD currency feed
+2026-09-14T08:07:47.4661079Z TRACE:: Brokerage.OnMessage(): Warning - Code: UnsupportedHistory - History requires India TradeBars at minute, hour or daily resolution and a valid date range.
+2026-09-14T08:07:47.5000125Z TRACE:: BaseSetupHandler.SetupCurrencyConversions():
+Account Type: Margin
+
+Symbol      Quantity    Conversion = Value in INR
+INR: ₹           0.00 @       1.00 = ₹0
+USD: $           0.00 @       0.00 = ₹0
+-------------------------------------------------
+CashBook Total Value:                ₹0
+
+2026-09-14T08:07:47.5019927Z TRACE:: Total margin information: TotalMarginUsed: 0.00, MarginRemaining: 0.00
+2026-09-14T08:07:47.5075938Z TRACE:: JOB HANDLERS:
+         DataFeed:             QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed
+         Setup:                QuantConnect.Lean.Engine.Setup.BrokerageSetupHandler
+         RealTime:             QuantConnect.Lean.Engine.RealTime.LiveTradingRealTimeHandler
+         Results:              QuantConnect.Lean.Engine.Results.LiveTradingResultHandler
+         Transactions:         QuantConnect.Lean.Engine.TransactionHandlers.BrokerageTransactionHandler
+         Object Store:         QuantConnect.Lean.Engine.Storage.LocalObjectStore
+         History Provider:     QuantConnect.Lean.Engine.HistoricalData.HistoryProviderManager
+         Brokerage:            QuantTrading.KiteBrokerage.KiteLeanBrokerage
+         Data Provider:        QuantConnect.Lean.Engine.DataFeeds.DefaultDataProvider
+
+2026-09-14T08:07:47.5275639Z TRACE:: Event Name "Daily Sampling", scheduled to run.
+2026-09-14T08:07:47.5276215Z TRACE:: AlgorithmManager.Run(): Begin DataStream - Start: 09/14/2026 00:00:00 Stop: 12/31/2050 00:00:00 Time: 09/14/2026 13:37:47 Warmup: False
+2026-09-14T08:07:47.5286043Z TRACE:: LiveTradingResultHandler.SendStatusUpdate(): status: 'Running'. 
+2026-09-14T08:07:47.5290114Z TRACE:: ProcessVolatilityHistoryRequirements(): Updating volatility models with historical data...
+2026-09-14T08:07:47.5298500Z TRACE:: ProcessVolatilityHistoryRequirements(): finished.
+2026-09-14T08:07:48.0714631Z TRACE:: KiteLeanBrokerage: subscribed NSE:IDEA token=3677697.
+2026-09-14T08:07:48.0719807Z TRACE:: DataManager.AddSubscription(): Added IDEA,#0,IDEA,Tick,Tick,Trade,Raw,OpenInterest. Start: 09/14/2026 08:07:48. End: 12/30/2050 18:30:00
+2026-09-14T08:07:48.0839741Z TRACE:: KiteLeanBrokerage: subscribed NSE:IDEA token=3677697.
+2026-09-14T08:07:48.0840658Z TRACE:: DataManager.AddSubscription(): Added IDEA,#0,IDEA,Tick,Tick,Quote,Raw,OpenInterest. Start: 09/14/2026 08:07:48. End: 12/30/2050 18:30:00
+2026-09-14T08:07:48.0933351Z TRACE:: LiveMappingEventProvider(IDEA,#0,IDEA,Tick,Tick,Trade,Raw,OpenInterest): new tradable date 20260914. New MapFile: True. MapFile.Count Old: 0 New: 0
+2026-09-14T08:07:48.1034100Z TRACE:: DataManager.RemoveSubscription(): Removed QC-UNIVERSE-USERDEFINED-INDIA-EQUITY,#0,QC-UNIVERSE-USERDEFINED-INDIA-EQUITY,Tick,Tick,Trade,Raw,OpenInterest,Internal
+2026-09-14T08:07:48.1036727Z TRACE:: LiveMappingEventProvider(IDEA,#0,IDEA,Tick,Tick,Quote,Raw,OpenInterest): new tradable date 20260914. New MapFile: True. MapFile.Count Old: 0 New: 0
+2026-09-14T08:07:48.1083181Z TRACE:: Debug: KiteLeanBrokerage account base currency: INR
+2026-09-14T08:07:48.1083549Z TRACE:: Debug: 2026-09-14 13:37:47 Launching analysis for IdeaLiveMonitor with LEAN Engine v2.5.0.0
+2026-09-14T08:07:48.1256896Z ERROR:: LiveTradingDataFeed.CreateSubscription(): CreateSubscription(): Failed configuration: 'SPY,#0,SPY,Minute,TradeBar,Trade,Adjusted,OpenInterest,Internal' System.NotSupportedException: Only Market.India is supported.
+   at QuantConnect.Lean.Engine.DataFeeds.DataQueueHandlerManager.Subscribe(SubscriptionDataConfig dataConfig, EventHandler newDataAvailableHandler)
+   at QuantConnect.Extensions.SubscribeWithMapping(IDataQueueHandler dataQueueHandler, SubscriptionDataConfig dataConfig, EventHandler newDataAvailableHandler, Func`2 isExpired, SubscriptionDataConfig& subscribedConfig)
+   at QuantConnect.Lean.Engine.DataFeeds.Enumerators.LiveSubscriptionEnumerator..ctor(SubscriptionDataConfig dataConfig, IDataQueueHandler dataQueueHandler, EventHandler handler, Func`2 isExpired)
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.Subscribe(SubscriptionDataConfig dataConfig, EventHandler newDataAvailableHandler, Func`2 isExpired)
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.CreateDataSubscription(SubscriptionRequest request)
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.CreateSubscription(SubscriptionRequest request)
+2026-09-14T08:07:48.1270098Z ERROR:: Extensions.SetRuntimeError(): Extensions.SetRuntimeError(): RuntimeError at 09/14/2026 08:07:48 UTC. Context: Failed to subscribe to SPY R735QTJ8XC9X System.NotSupportedException: Only Market.India is supported.
+   at QuantConnect.Lean.Engine.DataFeeds.DataQueueHandlerManager.Subscribe(SubscriptionDataConfig dataConfig, EventHandler newDataAvailableHandler)
+   at QuantConnect.Extensions.SubscribeWithMapping(IDataQueueHandler dataQueueHandler, SubscriptionDataConfig dataConfig, EventHandler newDataAvailableHandler, Func`2 isExpired, SubscriptionDataConfig& subscribedConfig)
+   at QuantConnect.Lean.Engine.DataFeeds.Enumerators.LiveSubscriptionEnumerator..ctor(SubscriptionDataConfig dataConfig, IDataQueueHandler dataQueueHandler, EventHandler handler, Func`2 isExpired)
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.Subscribe(SubscriptionDataConfig dataConfig, EventHandler newDataAvailableHandler, Func`2 isExpired)
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.CreateDataSubscription(SubscriptionRequest request)
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.CreateSubscription(SubscriptionRequest request)
+2026-09-14T08:07:48.1385362Z TRACE:: DataManager.AddSubscription(): Unable to add subscription for: SPY,#0,SPY,Minute,TradeBar,Trade,Adjusted,OpenInterest,Internal
+2026-09-14T08:07:48.1385687Z TRACE:: UniverseSelection.AddPendingInternalDataFeeds(): Adding internal benchmark data feed SPY,#0,SPY,Minute,TradeBar,Trade,Adjusted,OpenInterest,Internal
+2026-09-14T08:07:48.1400430Z ERROR:: LiveTradingDataFeed.CreateSubscription(): CreateSubscription(): Failed configuration: 'USDINR,#0,USDINR,Tick,Tick,Quote,Adjusted,OpenInterest,Internal' System.NotSupportedException: Only Market.India is supported.
+   at QuantConnect.Lean.Engine.DataFeeds.DataQueueHandlerManager.Subscribe(SubscriptionDataConfig dataConfig, EventHandler newDataAvailableHandler)
+   at QuantConnect.Extensions.SubscribeWithMapping(IDataQueueHandler dataQueueHandler, SubscriptionDataConfig dataConfig, EventHandler newDataAvailableHandler, Func`2 isExpired, SubscriptionDataConfig& subscribedConfig)
+   at QuantConnect.Lean.Engine.DataFeeds.Enumerators.LiveSubscriptionEnumerator..ctor(SubscriptionDataConfig dataConfig, IDataQueueHandler dataQueueHandler, EventHandler handler, Func`2 isExpired)
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.Subscribe(SubscriptionDataConfig dataConfig, EventHandler newDataAvailableHandler, Func`2 isExpired)
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.CreateDataSubscription(SubscriptionRequest request)
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.CreateSubscription(SubscriptionRequest request)
+2026-09-14T08:07:48.1405160Z ERROR:: Extensions.SetRuntimeError(): Extensions.SetRuntimeError(): RuntimeError at 09/14/2026 08:07:48 UTC. Context: Failed to subscribe to USDINR 8G System.NotSupportedException: Only Market.India is supported.
+   at QuantConnect.Lean.Engine.DataFeeds.DataQueueHandlerManager.Subscribe(SubscriptionDataConfig dataConfig, EventHandler newDataAvailableHandler)
+   at QuantConnect.Extensions.SubscribeWithMapping(IDataQueueHandler dataQueueHandler, SubscriptionDataConfig dataConfig, EventHandler newDataAvailableHandler, Func`2 isExpired, SubscriptionDataConfig& subscribedConfig)
+   at QuantConnect.Lean.Engine.DataFeeds.Enumerators.LiveSubscriptionEnumerator..ctor(SubscriptionDataConfig dataConfig, IDataQueueHandler dataQueueHandler, EventHandler handler, Func`2 isExpired)
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.Subscribe(SubscriptionDataConfig dataConfig, EventHandler newDataAvailableHandler, Func`2 isExpired)
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.CreateDataSubscription(SubscriptionRequest request)
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.CreateSubscription(SubscriptionRequest request)
+2026-09-14T08:07:48.1412838Z TRACE:: DataManager.AddSubscription(): Unable to add subscription for: USDINR,#0,USDINR,Tick,Tick,Quote,Adjusted,OpenInterest,Internal
+2026-09-14T08:07:48.1572769Z ERROR:: AlgorithmManager.Run(): Stopping, encountered a runtime error at 09/14/2026 08:07:48 UTC.
+2026-09-14T08:07:48.1574951Z TRACE:: Engine.Run(): Exiting Algorithm Manager
+2026-09-14T08:07:48.1586140Z TRACE:: LiveTradingDataFeed.Exit(): Start. Setting cancellation token...
+2026-09-14T08:07:48.1594159Z TRACE:: StopSafely(): Waiting for 'CustomDataExchange' thread to stop...
+2026-09-14T08:07:48.1596518Z TRACE:: BaseDataExchange(CustomDataExchange).ConsumeQueue(): Exiting...
+2026-09-14T08:07:48.1598217Z TRACE:: LiveTradingDataFeed.Exit(): Exit Finished.
+2026-09-14T08:07:48.1600174Z TRACE:: FileSystemDataFeed.Exit(): Start. Setting cancellation token...
+2026-09-14T08:07:48.1612488Z TRACE:: FileSystemDataFeed.Exit(): Exit Finished.
+2026-09-14T08:07:48.1616595Z TRACE:: Engine.Run(): Sending runtime error to user...
+2026-09-14T08:07:48.1646625Z TRACE:: OrderRequestProcessingPool.Dispose(): completed
+2026-09-14T08:07:48.1649445Z TRACE:: StopSafely(): Waiting for 'RealTime Thread' thread to stop...
+2026-09-14T08:07:49.0100536Z TRACE:: LiveTradingRealTimeHandler.Run(): Exiting thread... Exit triggered: True
+2026-09-14T08:07:49.0180214Z TRACE:: DataManager.RemoveSubscription(): Removed IDEA,#0,IDEA,Tick,Tick,Trade,Raw,OpenInterest
+2026-09-14T08:07:49.0265150Z TRACE:: DataManager.RemoveSubscription(): Removed IDEA,#0,IDEA,Tick,Tick,Quote,Raw,OpenInterest
+2026-09-14T08:07:49.0269546Z TRACE:: StopSafely(): Waiting for 'Isolator Thread' thread to stop...
+2026-09-14T08:07:49.0279687Z TRACE:: StopSafely(): Waiting for 'RealTimeScheduleEventService' thread to stop...
+2026-09-14T08:07:49.0383673Z TRACE:: StopSafely(): Waiting for 'Result Thread' thread to stop...
+2026-09-14T08:07:49.0384159Z TRACE:: Log: 2026-09-14 13:37:48 Runtime Error: Only Market.India is supported.
+2026-09-14T08:07:49.0385397Z ERROR:: 2026-09-14 13:37:48 Runtime Error: Only Market.India is supported.
+ QuantConnect.Exceptions.SystemExceptionInterpreter+SanitizedException: Only Market.India is supported.
+   at QuantConnect.Lean.Engine.DataFeeds.DataQueueHandlerManager.Subscribe(SubscriptionDataConfig dataConfig, EventHandler newDataAvailableHandler)
+   at QuantConnect.Extensions.SubscribeWithMapping(IDataQueueHandler dataQueueHandler, SubscriptionDataConfig dataConfig, EventHandler newDataAvailableHandler, Func`2 isExpired, SubscriptionDataConfig& subscribedConfig)
+   at QuantConnect.Lean.Engine.DataFeeds.Enumerators.LiveSubscriptionEnumerator..ctor(SubscriptionDataConfig dataConfig, IDataQueueHandler dataQueueHandler, EventHandler handler, Func`2 isExpired)
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.Subscribe(SubscriptionDataConfig dataConfig, EventHandler newDataAvailableHandler, Func`2 isExpired)
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.CreateDataSubscription(SubscriptionRequest request)
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.CreateSubscription(SubscriptionRequest request)
+2026-09-14T08:07:49.0385607Z TRACE:: Debug: 1997-12-31 19:00:00 Changing account currency from USD to INR...
+2026-09-14T08:07:49.0385652Z TRACE:: Debug: 2026-09-14 13:37:47 Changing account currency from INR to INR...
+2026-09-14T08:07:49.0385751Z TRACE:: Debug: 2026-09-14 13:37:47 Warning: No cash balances or holdings were found in the brokerage account.
+2026-09-14T08:07:49.0386573Z ERROR:: 2026-09-14 13:37:47 Brokerage Warning: History requires India TradeBars at minute, hour or daily resolution and a valid date range.
+2026-09-14T08:07:49.0386728Z TRACE:: Log: 2026-09-14 13:37:47 IDEA live monitor initialized. Strategy order submission is not implemented.
+2026-09-14T08:07:49.0386962Z TRACE:: LiveTradingResultHandler.Run(): Ending Thread...
+2026-09-14T08:07:49.0402545Z TRACE:: LiveTradingResultHandler.SendFinalResult(): Starting...
+2026-09-14T08:07:49.0613522Z TRACE:: LiveTradingResultHandler.SendFinalResult(): Finished storing results. Start sending...
+2026-09-14T08:07:49.0613847Z TRACE:: LiveTradingResultHandler.SendFinalResult(): Ended
+2026-09-14T08:07:49.0622276Z TRACE:: Engine.Run(): Disconnecting from brokerage...
+2026-09-14T08:07:49.0733965Z TRACE:: Brokerage.OnMessage(): Warning - Code: KiteConnection - Kite WebSocket reported an error.
+2026-09-14T08:07:49.0761375Z TRACE:: Engine.Run(): Disposing of setup handler...
+2026-09-14T08:07:49.0765813Z TRACE:: BrokerageSetupHandler.Setup(): Found data queue handler to dispose: QuantTrading.KiteBrokerage.KiteLeanBrokerage
+2026-09-14T08:07:49.0766143Z TRACE:: Engine.Main(): Analysis Completed and Results Posted.
+2026-09-14T08:07:49.0768274Z TRACE:: StopSafely(): Waiting for 'RealTime Thread' thread to stop...
+2026-09-14T08:07:49.0776205Z TRACE:: Engine.Main(): Packet removed from queue: IdeaLiveMonitor
+2026-09-14T08:07:49.0777827Z TRACE:: LeanEngineSystemHandlers.Dispose(): start...
+2026-09-14T08:07:49.0788760Z TRACE:: LeanEngineSystemHandlers.Dispose(): Disposed of system handlers.
+2026-09-14T08:07:49.0791608Z TRACE:: LeanEngineAlgorithmHandlers.Dispose(): start...
+2026-09-14T08:07:49.0793138Z TRACE:: LocalObjectStore.Dispose(): start...
+2026-09-14T08:07:49.0796262Z TRACE:: LocalObjectStore.Dispose(): end
+2026-09-14T08:07:49.0796962Z TRACE:: LeanEngineAlgorithmHandlers.Dispose(): Disposed of algorithm handlers.
+2026-09-14T08:07:49.0799080Z TRACE:: StopSafely(): Waiting for 'CpuPerformance' thread to stop...
+2026-09-14T08:07:49.0810568Z TRACE:: Program.Main(): Exiting Lean...

@@ -1,0 +1,17 @@
+Algorithm Initialization: Algorithm.Initialize() Error: Object reference not set to an instance of an object. Stack Trace: System.NullReferenceException: Object reference not set to an instance of an object.
+   at KiteConnect.WebSocket.Close(Boolean Abort)
+   at KiteConnect.Ticker.Close()
+   at QuantTrading.KiteBrokerage.KiteSession.Disconnect() in /root/QuantTrading/KiteBrokerage/KiteSession.cs:line 62
+   at QuantTrading.KiteBrokerage.KiteLeanBrokerage.Disconnect() in /root/QuantTrading/KiteBrokerage/KiteLeanBrokerage.cs:line 107
+   at QuantTrading.KiteBrokerage.KiteLeanBrokerage.Connect() in /root/QuantTrading/KiteBrokerage/KiteLeanBrokerage.cs:line 99
+   at QuantConnect.Lean.Engine.HistoricalData.BrokerageHistoryProvider.Initialize(HistoryProviderInitializeParameters parameters)
+   at QuantConnect.Lean.Engine.HistoricalData.HistoryProviderManager.Initialize(HistoryProviderInitializeParameters parameters)
+   at QuantConnect.Lean.Engine.Engine.Run(AlgorithmNodePacket job, AlgorithmManager manager, String assemblyPath, WorkerThread workerThread): StackTrace: System.NullReferenceException: Object reference not set to an instance of an object.
+   at KiteConnect.WebSocket.Close(Boolean Abort)
+   at KiteConnect.Ticker.Close()
+   at QuantTrading.KiteBrokerage.KiteSession.Disconnect() in /root/QuantTrading/KiteBrokerage/KiteSession.cs:line 62
+   at QuantTrading.KiteBrokerage.KiteLeanBrokerage.Disconnect() in /root/QuantTrading/KiteBrokerage/KiteLeanBrokerage.cs:line 107
+   at QuantTrading.KiteBrokerage.KiteLeanBrokerage.Connect() in /root/QuantTrading/KiteBrokerage/KiteLeanBrokerage.cs:line 99
+   at QuantConnect.Lean.Engine.HistoricalData.BrokerageHistoryProvider.Initialize(HistoryProviderInitializeParameters parameters)
+   at QuantConnect.Lean.Engine.HistoricalData.HistoryProviderManager.Initialize(HistoryProviderInitializeParameters parameters)
+   at QuantConnect.Lean.Engine.Engine.Run(AlgorithmNodePacket job, AlgorithmManager manager, String assemblyPath, WorkerThread workerThread)

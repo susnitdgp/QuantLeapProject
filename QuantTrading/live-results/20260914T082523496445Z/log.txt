@@ -1,0 +1,76 @@
+2026-09-14T08:25:25.7401238Z TRACE:: Engine.Main(): LEAN ALGORITHMIC TRADING ENGINE v2.5.0.0 Mode: DEBUG (64bit) Host: vmi3506951
+2026-09-14T08:25:25.7577930Z TRACE:: Engine.Main(): Started 13:55
+2026-09-14T08:25:25.7869181Z TRACE:: JobQueue.NextJob(): Selected QuantTrading.Algorithms.dll
+2026-09-14T08:25:25.8614172Z TRACE:: JobQueue.NextJob(): Not able to fetch brokerage factory with name: KiteLeanBrokerage
+2026-09-14T08:25:26.7967062Z TRACE:: AlgorithmManager.CreateTokenBucket(): Initializing LeakyBucket: Capacity: 120 RefillAmount: 18 TimeInterval: 1440
+2026-09-14T08:25:26.8098548Z TRACE:: Engine.Run(): Resource limits '0' CPUs. 2147483647 MB RAM.
+2026-09-14T08:25:26.8104773Z TRACE:: TextSubscriptionDataSourceReader.SetCacheSize(): Setting cache size to 71582788 items
+2026-09-14T08:25:26.8197765Z TRACE:: Loader.TryCreateILAlgorithm(): Loading only the algorithm assembly
+2026-09-14T08:25:27.2264976Z TRACE:: Loader.TryCreateILAlgorithm(): Loaded IdeaLiveMonitor
+2026-09-14T08:25:27.2293545Z TRACE:: LocalObjectStore.Initialize(): Storage Root: /root/QuantTrading/Runner/bin/Release/net10.0/storage. StorageFileCount 10000. StorageLimit 10240MB. StoragePermissions Read=True Write=True Delete=True
+2026-09-14T08:25:27.2297004Z TRACE:: LiveTradingDataFeed.GetDataChannelProvider(): will use DataChannelProvider
+2026-09-14T08:25:27.2325556Z TRACE:: BrokerageSetupHandler.CreateBrokerage(): creating brokerage 'KiteLeanBrokerage'
+2026-09-14T08:25:27.2614175Z TRACE:: CompositeDataQueueHandler.SetJob(): will use [
+  "KiteLeanBrokerage"
+]
+2026-09-14T08:25:27.2643518Z TRACE:: BaseDataExchange(CustomDataExchange) Starting...
+2026-09-14T08:25:29.4589969Z TRACE:: KiteLeanBrokerage: WebSocket connected; full-mode subscriptions restored.
+2026-09-14T08:25:29.4615440Z TRACE:: KiteLeanBrokerage: authentication and instrument master loaded. Orders enabled: False
+2026-09-14T08:25:29.4641832Z TRACE:: HistoryProviderManager.Initialize(): history providers [BrokerageHistoryProvider,SubscriptionDataReaderHistoryProvider]
+2026-09-14T08:25:29.4696587Z TRACE:: BaseSetupHandler.Setup(LocalPlatform): UID: 0, PID: 0, Version: 2.5.0.0, Source: WebIDE
+2026-09-14T08:25:29.4709052Z TRACE:: LiveTradingResultHandler.SendStatusUpdate(): status: 'LoggingIn'.  Logging into brokerage...
+2026-09-14T08:25:29.4711569Z TRACE:: BrokerageSetupHandler.Setup(): Connecting to brokerage...
+2026-09-14T08:25:29.4714714Z TRACE:: BrokerageSetupHandler.Setup(): KiteLeanBrokerage account base currency: INR
+2026-09-14T08:25:29.4780604Z TRACE:: SecurityPortfolioManager.SetAccountCurrency(): setting account currency to INR
+2026-09-14T08:25:29.4780919Z TRACE:: BrokerageSetupHandler.Setup(): Initializing algorithm...
+2026-09-14T08:25:29.4781128Z TRACE:: LiveTradingResultHandler.SendStatusUpdate(): status: 'Initializing'.  Initializing algorithm...
+2026-09-14T08:25:29.5873254Z TRACE:: BrokerageSetupHandler.Setup(): Fetching cash balance from brokerage...
+2026-09-14T08:25:29.6488644Z TRACE:: BrokerageSetupHandler.Setup(): Setting INR cash to 0
+2026-09-14T08:25:29.6525874Z TRACE:: BrokerageSetupHandler.Setup(): Fetching open orders from brokerage...
+2026-09-14T08:25:29.6815242Z TRACE:: BrokerageSetupHandler.Setup(): Fetching holdings from brokerage...
+2026-09-14T08:25:29.7144759Z TRACE:: AggregationManager.Initialize(): daily strict end times: True
+2026-09-14T08:25:29.7426449Z TRACE:: LiveTradingDataFeed.CreateUniverseSubscription(): Creating user defined universe: QC-UNIVERSE-USERDEFINED-INDIA-EQUITY UL
+2026-09-14T08:25:29.7468105Z TRACE:: DataManager.AddSubscription(): Added QC-UNIVERSE-USERDEFINED-INDIA-EQUITY,#0,QC-UNIVERSE-USERDEFINED-INDIA-EQUITY,Tick,Tick,Trade,Raw,OpenInterest,Internal. Start: 09/14/2026 08:25:29. End: 12/31/2050 00:00:00
+2026-09-14T08:25:29.7562097Z TRACE:: BaseSetupHandler.SetupCurrencyConversions():
+Account Type: Margin
+
+Symbol      Quantity    Conversion = Value in INR
+INR: ₹           0.00 @       1.00 = ₹0
+-------------------------------------------------
+CashBook Total Value:                ₹0
+
+2026-09-14T08:25:29.7586047Z TRACE:: Total margin information: TotalMarginUsed: 0.00, MarginRemaining: 0.00
+2026-09-14T08:25:29.7644929Z TRACE:: JOB HANDLERS:
+         DataFeed:             QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed
+         Setup:                QuantConnect.Lean.Engine.Setup.BrokerageSetupHandler
+         RealTime:             QuantConnect.Lean.Engine.RealTime.LiveTradingRealTimeHandler
+         Results:              QuantConnect.Lean.Engine.Results.LiveTradingResultHandler
+         Transactions:         QuantConnect.Lean.Engine.TransactionHandlers.BrokerageTransactionHandler
+         Object Store:         QuantConnect.Lean.Engine.Storage.LocalObjectStore
+         History Provider:     QuantConnect.Lean.Engine.HistoricalData.HistoryProviderManager
+         Brokerage:            QuantTrading.KiteBrokerage.KiteLeanBrokerage
+         Data Provider:        QuantConnect.Lean.Engine.DataFeeds.DefaultDataProvider
+
+2026-09-14T08:25:29.7909922Z TRACE:: Event Name "Daily Sampling", scheduled to run.
+2026-09-14T08:25:29.7910631Z TRACE:: AlgorithmManager.Run(): Begin DataStream - Start: 09/14/2026 00:00:00 Stop: 12/31/2050 00:00:00 Time: 09/14/2026 13:55:29 Warmup: False
+2026-09-14T08:25:29.7921658Z TRACE:: LiveTradingResultHandler.SendStatusUpdate(): status: 'Running'. 
+2026-09-14T08:25:29.7925365Z TRACE:: ProcessVolatilityHistoryRequirements(): Updating volatility models with historical data...
+2026-09-14T08:25:29.7935484Z TRACE:: ProcessVolatilityHistoryRequirements(): finished.
+2026-09-14T08:25:29.9745287Z TRACE:: Debug: KiteLeanBrokerage account base currency: INR
+2026-09-14T08:25:29.9745668Z TRACE:: Debug: 2026-09-14 13:55:29 Launching analysis for IdeaLiveMonitor with LEAN Engine v2.5.0.0
+2026-09-14T08:25:30.0844652Z TRACE:: KiteLeanBrokerage: subscribed NSE:IDEA token=3677697.
+2026-09-14T08:25:30.0852974Z TRACE:: DataManager.AddSubscription(): Added IDEA,#0,IDEA,Tick,Tick,Trade,Raw,OpenInterest. Start: 09/14/2026 08:25:30. End: 12/30/2050 18:30:00
+2026-09-14T08:25:30.0979548Z TRACE:: KiteLeanBrokerage: subscribed NSE:IDEA token=3677697.
+2026-09-14T08:25:30.0980378Z TRACE:: DataManager.AddSubscription(): Added IDEA,#0,IDEA,Tick,Tick,Quote,Raw,OpenInterest. Start: 09/14/2026 08:25:30. End: 12/30/2050 18:30:00
+2026-09-14T08:25:30.1064305Z TRACE:: LiveMappingEventProvider(IDEA,#0,IDEA,Tick,Tick,Trade,Raw,OpenInterest): new tradable date 20260914. New MapFile: True. MapFile.Count Old: 0 New: 0
+2026-09-14T08:25:30.1167977Z TRACE:: DataManager.RemoveSubscription(): Removed QC-UNIVERSE-USERDEFINED-INDIA-EQUITY,#0,QC-UNIVERSE-USERDEFINED-INDIA-EQUITY,Tick,Tick,Trade,Raw,OpenInterest,Internal
+2026-09-14T08:25:30.1170678Z TRACE:: LiveMappingEventProvider(IDEA,#0,IDEA,Tick,Tick,Quote,Raw,OpenInterest): new tradable date 20260914. New MapFile: True. MapFile.Count Old: 0 New: 0
+2026-09-14T08:25:30.1309233Z TRACE:: KiteLeanBrokerage: subscribed NSE:IDEA token=3677697.
+2026-09-14T08:25:30.1310052Z TRACE:: DataManager.AddSubscription(): Added IDEA,#0,IDEA,Minute,TradeBar,Trade,Adjusted,OpenInterest,Internal. Start: 09/14/2026 08:24:00. End: 12/30/2050 18:30:00
+2026-09-14T08:25:30.1310190Z TRACE:: UniverseSelection.AddPendingInternalDataFeeds(): Adding internal benchmark data feed IDEA,#0,IDEA,Minute,TradeBar,Trade,Adjusted,OpenInterest,Internal
+2026-09-14T08:25:30.1313953Z TRACE:: LiveMappingEventProvider(IDEA,#0,IDEA,Minute,TradeBar,Trade,Adjusted,OpenInterest,Internal): new tradable date 20260914. New MapFile: True. MapFile.Count Old: 0 New: 0
+2026-09-14T08:25:31.4752927Z TRACE:: Debug: 1997-12-31 19:00:00 Changing account currency from USD to INR...
+2026-09-14T08:25:31.4754483Z TRACE:: Debug: 2026-09-14 13:55:29 Changing account currency from INR to INR...
+2026-09-14T08:25:31.4755985Z TRACE:: Debug: 2026-09-14 13:55:29 Warning: No cash balances or holdings were found in the brokerage account.
+2026-09-14T08:25:31.4760420Z TRACE:: Log: 2026-09-14 13:55:29 IDEA live monitor initialized. Strategy order submission is not implemented.
+2026-09-14T08:26:10.5470157Z TRACE:: Program.ExitKeyPress(): Lean instance has been cancelled, shutting down safely now

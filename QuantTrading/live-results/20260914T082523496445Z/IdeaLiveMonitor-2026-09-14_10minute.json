@@ -1,0 +1,137 @@
+{
+  "holdings": {
+    "IDEA UL": {
+      "c": "₹"
+    }
+  },
+  "cash": {
+    "INR": {
+      "securitySymbols": [],
+      "symbol": "INR",
+      "amount": 0.0,
+      "conversionRate": 1.0,
+      "currencySymbol": "₹",
+      "valueInAccountCurrency": 0.0
+    }
+  },
+  "accountCurrency": "INR",
+  "accountCurrencySymbol": "₹",
+  "charts": {
+    "Strategy Equity": {
+      "name": "Strategy Equity",
+      "chartType": 0,
+      "series": {}
+    },
+    "Portfolio Margin": {
+      "name": "Portfolio Margin",
+      "chartType": 0,
+      "series": {},
+      "legendDisabled": true
+    }
+  },
+  "orders": {},
+  "profitLoss": {},
+  "statistics": {},
+  "runtimeStatistics": {
+    "Equity": "₹0.00",
+    "Fees": "-₹0.00",
+    "Holdings": "₹0.00",
+    "Net Profit": "₹0.00",
+    "Probabilistic Sharpe Ratio": "0%",
+    "Return": "0.00 %",
+    "Unrealized": "₹0.00",
+    "Volume": "₹0.00"
+  },
+  "state": {
+    "StartTime": "2026-09-14T08:25:25Z",
+    "EndTime": "",
+    "RuntimeError": "",
+    "StackTrace": "",
+    "LogCount": "2",
+    "OrderCount": "0",
+    "InsightCount": "0",
+    "Hostname": "vmi3506951",
+    "Status": "Running"
+  },
+  "serverStatistics": {
+    "CPU Usage": "0.0%",
+    "Used RAM (MB)": "261",
+    "Total RAM (MB)": "2147483647",
+    "Hostname": "vmi3506951",
+    "LEAN Version": "v2.5.0.0",
+    "Up Time": "0d 00:00:03"
+  },
+  "totalPerformance": {
+    "tradeStatistics": {
+      "startDateTime": null,
+      "endDateTime": null,
+      "totalNumberOfTrades": 0,
+      "numberOfWinningTrades": 0,
+      "numberOfLosingTrades": 0,
+      "totalProfitLoss": "0",
+      "totalProfit": "0",
+      "totalLoss": "0",
+      "largestProfit": "0",
+      "largestLoss": "0",
+      "averageProfitLoss": "0",
+      "averageProfit": "0",
+      "averageLoss": "0",
+      "averageTradeDuration": "00:00:00",
+      "averageWinningTradeDuration": "00:00:00",
+      "averageLosingTradeDuration": "00:00:00",
+      "medianTradeDuration": "00:00:00",
+      "medianWinningTradeDuration": "00:00:00",
+      "medianLosingTradeDuration": "00:00:00",
+      "maxConsecutiveWinningTrades": 0,
+      "maxConsecutiveLosingTrades": 0,
+      "profitLossRatio": "0",
+      "winLossRatio": "0",
+      "winRate": "0",
+      "lossRate": "0",
+      "averageMAE": "0",
+      "averageMFE": "0",
+      "largestMAE": "0",
+      "largestMFE": "0",
+      "maximumClosedTradeDrawdown": "0",
+      "maximumIntraTradeDrawdown": "0",
+      "profitLossStandardDeviation": "0",
+      "profitLossDownsideDeviation": "0",
+      "profitFactor": "0",
+      "sharpeRatio": "0",
+      "sortinoRatio": "0",
+      "profitToMaxDrawdownRatio": "0",
+      "maximumEndTradeDrawdown": "0",
+      "averageEndTradeDrawdown": "0",
+      "maximumDrawdownDuration": "00:00:00",
+      "totalFees": "0"
+    },
+    "portfolioStatistics": {
+      "averageWinRate": "0",
+      "averageLossRate": "0",
+      "profitLossRatio": "0",
+      "winRate": "0",
+      "lossRate": "0",
+      "expectancy": "0",
+      "startEquity": "0",
+      "endEquity": "0",
+      "compoundingAnnualReturn": "0",
+      "drawdown": "0",
+      "totalNetProfit": "0",
+      "sharpeRatio": "0",
+      "probabilisticSharpeRatio": "0",
+      "sortinoRatio": "0",
+      "alpha": "0",
+      "beta": "0",
+      "annualStandardDeviation": "0",
+      "annualVariance": "0",
+      "informationRatio": "0",
+      "trackingError": "0",
+      "treynorRatio": "0",
+      "portfolioTurnover": "0",
+      "valueAtRisk99": "0",
+      "valueAtRisk95": "0",
+      "drawdownRecovery": "0"
+    },
+    "closedTrades": []
+  }
+}

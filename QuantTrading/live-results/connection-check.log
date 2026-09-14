@@ -1,0 +1,104 @@
+  Determining projects to restore...
+/root/QuantTrading/Algorithms/QuantTrading.Algorithms.csproj : warning NU1903: Package 'DotNetZip' 1.16.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-xhg6-9j5j-w4vf [/root/QuantTrading/Runner/QuantTrading.Runner.csproj]
+/root/QuantTrading/Runner/QuantTrading.Runner.csproj : warning NU1903: Package 'DotNetZip' 1.16.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-xhg6-9j5j-w4vf
+/root/QuantTrading/KiteBrokerage/QuantTrading.KiteBrokerage.csproj : warning NU1903: Package 'DotNetZip' 1.16.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-xhg6-9j5j-w4vf [/root/QuantTrading/Runner/QuantTrading.Runner.csproj]
+  All projects are up-to-date for restore.
+/root/QuantTrading/Runner/QuantTrading.Runner.csproj : warning NU1903: Package 'DotNetZip' 1.16.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-xhg6-9j5j-w4vf
+/root/QuantTrading/Algorithms/QuantTrading.Algorithms.csproj : warning NU1903: Package 'DotNetZip' 1.16.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-xhg6-9j5j-w4vf
+/root/QuantTrading/KiteBrokerage/QuantTrading.KiteBrokerage.csproj : warning NU1903: Package 'DotNetZip' 1.16.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-xhg6-9j5j-w4vf
+  QuantTrading.Algorithms -> /root/QuantTrading/Algorithms/bin/Release/net10.0/QuantTrading.Algorithms.dll
+  QuantTrading.KiteBrokerage -> /root/QuantTrading/KiteBrokerage/bin/Release/net10.0/QuantTrading.KiteBrokerage.dll
+  QuantTrading.Runner -> /root/QuantTrading/Runner/bin/Release/net10.0/QuantTrading.Runner.dll
+
+Build succeeded.
+
+/root/QuantTrading/Algorithms/QuantTrading.Algorithms.csproj : warning NU1903: Package 'DotNetZip' 1.16.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-xhg6-9j5j-w4vf [/root/QuantTrading/Runner/QuantTrading.Runner.csproj]
+/root/QuantTrading/Runner/QuantTrading.Runner.csproj : warning NU1903: Package 'DotNetZip' 1.16.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-xhg6-9j5j-w4vf
+/root/QuantTrading/KiteBrokerage/QuantTrading.KiteBrokerage.csproj : warning NU1903: Package 'DotNetZip' 1.16.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-xhg6-9j5j-w4vf [/root/QuantTrading/Runner/QuantTrading.Runner.csproj]
+/root/QuantTrading/Runner/QuantTrading.Runner.csproj : warning NU1903: Package 'DotNetZip' 1.16.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-xhg6-9j5j-w4vf
+/root/QuantTrading/Algorithms/QuantTrading.Algorithms.csproj : warning NU1903: Package 'DotNetZip' 1.16.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-xhg6-9j5j-w4vf
+/root/QuantTrading/KiteBrokerage/QuantTrading.KiteBrokerage.csproj : warning NU1903: Package 'DotNetZip' 1.16.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-xhg6-9j5j-w4vf
+    6 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.50
+Build/config check passed. Credentials present; broker authentication not checked.
+20260914 08:25:23.629 TRACE:: Using /tmp/quanttrading-live-33vaf2bx/config.json as configuration file
+20260914 08:25:23.752 TRACE:: Composer(): Loading Assemblies from /root/QuantTrading/Runner/bin/Release/net10.0/
+20260914 08:25:24.505 TRACE:: Python for .NET Assembly: Python.Runtime, Version=2.0.65.0, Culture=neutral, PublicKeyToken=5000fea6cba702dd
+20260914 08:25:25.739 TRACE:: Engine.Main(): LEAN ALGORITHMIC TRADING ENGINE v2.5.0.0 Mode: DEBUG (64bit) Host: vmi3506951
+20260914 08:25:25.757 TRACE:: Engine.Main(): Started 13:55
+20260914 08:25:25.786 TRACE:: JobQueue.NextJob(): Selected QuantTrading.Algorithms.dll
+20260914 08:25:25.861 TRACE:: JobQueue.NextJob(): Not able to fetch brokerage factory with name: KiteLeanBrokerage
+20260914 08:25:26.796 TRACE:: AlgorithmManager.CreateTokenBucket(): Initializing LeakyBucket: Capacity: 120 RefillAmount: 18 TimeInterval: 1440
+20260914 08:25:26.809 TRACE:: Engine.Run(): Resource limits '0' CPUs. 2147483647 MB RAM.
+20260914 08:25:26.810 TRACE:: TextSubscriptionDataSourceReader.SetCacheSize(): Setting cache size to 71582788 items
+20260914 08:25:26.818 TRACE:: Loader.TryCreateILAlgorithm(): Loading only the algorithm assembly
+20260914 08:25:27.226 TRACE:: Loader.TryCreateILAlgorithm(): Loaded IdeaLiveMonitor
+20260914 08:25:27.229 TRACE:: LocalObjectStore.Initialize(): Storage Root: /root/QuantTrading/Runner/bin/Release/net10.0/storage. StorageFileCount 10000. StorageLimit 10240MB. StoragePermissions Read=True Write=True Delete=True
+20260914 08:25:27.229 TRACE:: LiveTradingDataFeed.GetDataChannelProvider(): will use DataChannelProvider
+20260914 08:25:27.232 TRACE:: BrokerageSetupHandler.CreateBrokerage(): creating brokerage 'KiteLeanBrokerage'
+20260914 08:25:27.261 TRACE:: CompositeDataQueueHandler.SetJob(): will use [
+  "KiteLeanBrokerage"
+]
+20260914 08:25:27.264 TRACE:: BaseDataExchange(CustomDataExchange) Starting...
+20260914 08:25:29.458 TRACE:: KiteLeanBrokerage: WebSocket connected; full-mode subscriptions restored.
+20260914 08:25:29.461 TRACE:: KiteLeanBrokerage: authentication and instrument master loaded. Orders enabled: False
+20260914 08:25:29.464 TRACE:: HistoryProviderManager.Initialize(): history providers [BrokerageHistoryProvider,SubscriptionDataReaderHistoryProvider]
+20260914 08:25:29.469 TRACE:: BaseSetupHandler.Setup(LocalPlatform): UID: 0, PID: 0, Version: 2.5.0.0, Source: WebIDE
+20260914 08:25:29.470 TRACE:: LiveTradingResultHandler.SendStatusUpdate(): status: 'LoggingIn'.  Logging into brokerage...
+20260914 08:25:29.471 TRACE:: BrokerageSetupHandler.Setup(): Connecting to brokerage...
+20260914 08:25:29.471 TRACE:: BrokerageSetupHandler.Setup(): KiteLeanBrokerage account base currency: INR
+20260914 08:25:29.477 TRACE:: SecurityPortfolioManager.SetAccountCurrency(): setting account currency to INR
+20260914 08:25:29.478 TRACE:: BrokerageSetupHandler.Setup(): Initializing algorithm...
+20260914 08:25:29.478 TRACE:: LiveTradingResultHandler.SendStatusUpdate(): status: 'Initializing'.  Initializing algorithm...
+20260914 08:25:29.587 TRACE:: BrokerageSetupHandler.Setup(): Fetching cash balance from brokerage...
+20260914 08:25:29.648 TRACE:: BrokerageSetupHandler.Setup(): Setting INR cash to 0
+20260914 08:25:29.652 TRACE:: BrokerageSetupHandler.Setup(): Fetching open orders from brokerage...
+20260914 08:25:29.681 TRACE:: BrokerageSetupHandler.Setup(): Fetching holdings from brokerage...
+20260914 08:25:29.714 TRACE:: AggregationManager.Initialize(): daily strict end times: True
+20260914 08:25:29.742 TRACE:: LiveTradingDataFeed.CreateUniverseSubscription(): Creating user defined universe: QC-UNIVERSE-USERDEFINED-INDIA-EQUITY UL
+20260914 08:25:29.746 TRACE:: DataManager.AddSubscription(): Added QC-UNIVERSE-USERDEFINED-INDIA-EQUITY,#0,QC-UNIVERSE-USERDEFINED-INDIA-EQUITY,Tick,Tick,Trade,Raw,OpenInterest,Internal. Start: 09/14/2026 08:25:29. End: 12/31/2050 00:00:00
+20260914 08:25:29.756 TRACE:: BaseSetupHandler.SetupCurrencyConversions():
+Account Type: Margin
+
+Symbol      Quantity    Conversion = Value in INR
+INR: ₹           0.00 @       1.00 = ₹0
+-------------------------------------------------
+CashBook Total Value:                ₹0
+
+20260914 08:25:29.758 TRACE:: Total margin information: TotalMarginUsed: 0.00, MarginRemaining: 0.00
+20260914 08:25:29.764 TRACE:: JOB HANDLERS:
+         DataFeed:             QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed
+         Setup:                QuantConnect.Lean.Engine.Setup.BrokerageSetupHandler
+         RealTime:             QuantConnect.Lean.Engine.RealTime.LiveTradingRealTimeHandler
+         Results:              QuantConnect.Lean.Engine.Results.LiveTradingResultHandler
+         Transactions:         QuantConnect.Lean.Engine.TransactionHandlers.BrokerageTransactionHandler
+         Object Store:         QuantConnect.Lean.Engine.Storage.LocalObjectStore
+         History Provider:     QuantConnect.Lean.Engine.HistoricalData.HistoryProviderManager
+         Brokerage:            QuantTrading.KiteBrokerage.KiteLeanBrokerage
+         Data Provider:        QuantConnect.Lean.Engine.DataFeeds.DefaultDataProvider
+
+20260914 08:25:29.790 TRACE:: Event Name "Daily Sampling", scheduled to run.
+20260914 08:25:29.791 TRACE:: AlgorithmManager.Run(): Begin DataStream - Start: 09/14/2026 00:00:00 Stop: 12/31/2050 00:00:00 Time: 09/14/2026 13:55:29 Warmup: False
+20260914 08:25:29.792 TRACE:: LiveTradingResultHandler.SendStatusUpdate(): status: 'Running'. 
+20260914 08:25:29.792 TRACE:: ProcessVolatilityHistoryRequirements(): Updating volatility models with historical data...
+20260914 08:25:29.793 TRACE:: ProcessVolatilityHistoryRequirements(): finished.
+20260914 08:25:29.974 TRACE:: Debug: KiteLeanBrokerage account base currency: INR
+20260914 08:25:29.974 TRACE:: Debug: 2026-09-14 13:55:29 Launching analysis for IdeaLiveMonitor with LEAN Engine v2.5.0.0
+20260914 08:25:30.084 TRACE:: KiteLeanBrokerage: subscribed NSE:IDEA token=3677697.
+20260914 08:25:30.085 TRACE:: DataManager.AddSubscription(): Added IDEA,#0,IDEA,Tick,Tick,Trade,Raw,OpenInterest. Start: 09/14/2026 08:25:30. End: 12/30/2050 18:30:00
+20260914 08:25:30.097 TRACE:: KiteLeanBrokerage: subscribed NSE:IDEA token=3677697.
+20260914 08:25:30.098 TRACE:: DataManager.AddSubscription(): Added IDEA,#0,IDEA,Tick,Tick,Quote,Raw,OpenInterest. Start: 09/14/2026 08:25:30. End: 12/30/2050 18:30:00
+20260914 08:25:30.106 TRACE:: LiveMappingEventProvider(IDEA,#0,IDEA,Tick,Tick,Trade,Raw,OpenInterest): new tradable date 20260914. New MapFile: True. MapFile.Count Old: 0 New: 0
+20260914 08:25:30.116 TRACE:: DataManager.RemoveSubscription(): Removed QC-UNIVERSE-USERDEFINED-INDIA-EQUITY,#0,QC-UNIVERSE-USERDEFINED-INDIA-EQUITY,Tick,Tick,Trade,Raw,OpenInterest,Internal
+20260914 08:25:30.117 TRACE:: LiveMappingEventProvider(IDEA,#0,IDEA,Tick,Tick,Quote,Raw,OpenInterest): new tradable date 20260914. New MapFile: True. MapFile.Count Old: 0 New: 0
+20260914 08:25:30.130 TRACE:: KiteLeanBrokerage: subscribed NSE:IDEA token=3677697.
+20260914 08:25:30.131 TRACE:: DataManager.AddSubscription(): Added IDEA,#0,IDEA,Minute,TradeBar,Trade,Adjusted,OpenInterest,Internal. Start: 09/14/2026 08:24:00. End: 12/30/2050 18:30:00
+20260914 08:25:30.131 TRACE:: UniverseSelection.AddPendingInternalDataFeeds(): Adding internal benchmark data feed IDEA,#0,IDEA,Minute,TradeBar,Trade,Adjusted,OpenInterest,Internal
+20260914 08:25:30.131 TRACE:: LiveMappingEventProvider(IDEA,#0,IDEA,Minute,TradeBar,Trade,Adjusted,OpenInterest,Internal): new tradable date 20260914. New MapFile: True. MapFile.Count Old: 0 New: 0
+20260914 08:25:31.474 TRACE:: Debug: 1997-12-31 19:00:00 Changing account currency from USD to INR...
+20260914 08:25:31.475 TRACE:: Debug: 2026-09-14 13:55:29 Changing account currency from INR to INR...
+20260914 08:25:31.475 TRACE:: Debug: 2026-09-14 13:55:29 Warning: No cash balances or holdings were found in the brokerage account.
+20260914 08:25:31.476 TRACE:: Log: 2026-09-14 13:55:29 IDEA live monitor initialized. Strategy order submission is not implemented.
+20260914 08:26:10.546 TRACE:: Program.ExitKeyPress(): Lean instance has been cancelled, shutting down safely now

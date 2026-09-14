@@ -1,0 +1,17 @@
+Algorithm Initialization: KiteLeanBrokerage account base currency: INR
+2026-09-14 13:37:47 Launching analysis for IdeaLiveMonitor with LEAN Engine v2.5.0.0
+2026-09-14 13:37:48 Runtime Error: Only Market.India is supported.
+2026-09-14 13:37:48 Runtime Error: Only Market.India is supported.: StackTrace: QuantConnect.Exceptions.SystemExceptionInterpreter+SanitizedException: Only Market.India is supported.
+   at QuantConnect.Lean.Engine.DataFeeds.DataQueueHandlerManager.Subscribe(SubscriptionDataConfig dataConfig, EventHandler newDataAvailableHandler)
+   at QuantConnect.Extensions.SubscribeWithMapping(IDataQueueHandler dataQueueHandler, SubscriptionDataConfig dataConfig, EventHandler newDataAvailableHandler, Func`2 isExpired, SubscriptionDataConfig& subscribedConfig)
+   at QuantConnect.Lean.Engine.DataFeeds.Enumerators.LiveSubscriptionEnumerator..ctor(SubscriptionDataConfig dataConfig, IDataQueueHandler dataQueueHandler, EventHandler handler, Func`2 isExpired)
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.Subscribe(SubscriptionDataConfig dataConfig, EventHandler newDataAvailableHandler, Func`2 isExpired)
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.CreateDataSubscription(SubscriptionRequest request)
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.CreateSubscription(SubscriptionRequest request)
+1997-12-31 19:00:00 Changing account currency from USD to INR...
+2026-09-14 13:37:47 Changing account currency from INR to INR...
+2026-09-14 13:37:47 Warning: No cash balances or holdings were found in the brokerage account.
+2026-09-14 13:37:47 Brokerage Warning: History requires India TradeBars at minute, hour or daily resolution and a valid date range.
+2026-09-14 13:37:47 Brokerage Warning: History requires India TradeBars at minute, hour or daily resolution and a valid date range.
+2026-09-14 13:37:47 Brokerage Warning: History requires India TradeBars at minute, hour or daily resolution and a valid date range.
+2026-09-14 13:37:47 IDEA live monitor initialized. Strategy order submission is not implemented.

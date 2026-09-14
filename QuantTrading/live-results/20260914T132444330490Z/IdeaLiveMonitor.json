@@ -1,0 +1,54 @@
+{
+  "holdings": {},
+  "cash": {
+    "INR": {
+      "securitySymbols": [],
+      "symbol": "INR",
+      "amount": 0.0,
+      "conversionRate": 1.0,
+      "currencySymbol": "₹",
+      "valueInAccountCurrency": 0.0
+    }
+  },
+  "accountCurrency": "INR",
+  "accountCurrencySymbol": "₹",
+  "charts": {
+    "Strategy Equity": {
+      "name": "Strategy Equity",
+      "chartType": 0,
+      "series": {}
+    }
+  },
+  "orders": {},
+  "profitLoss": {},
+  "statistics": {},
+  "runtimeStatistics": {
+    "Equity": "₹0.00",
+    "Fees": "-₹0.00",
+    "Holdings": "₹0.00",
+    "Net Profit": "₹0.00",
+    "Probabilistic Sharpe Ratio": "0%",
+    "Return": "0.00 %",
+    "Unrealized": "₹0.00",
+    "Volume": "₹0.00"
+  },
+  "state": {
+    "StartTime": "2026-09-14T13:24:46Z",
+    "EndTime": "",
+    "RuntimeError": "",
+    "StackTrace": "",
+    "LogCount": "2",
+    "OrderCount": "0",
+    "InsightCount": "0",
+    "Hostname": "vmi3506951",
+    "Status": "Running"
+  },
+  "serverStatistics": {
+    "CPU Usage": "0.0%",
+    "Used RAM (MB)": "124",
+    "Total RAM (MB)": "2147483647",
+    "Hostname": "vmi3506951",
+    "LEAN Version": "v2.5.0.0",
+    "Up Time": "0d 00:00:04"
+  }
+}
