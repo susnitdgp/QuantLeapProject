@@ -20,7 +20,7 @@ namespace QuantConnect.Algorithm.CSharp
                 fillForward: false, dataNormalizationMode: DataNormalizationMode.Raw).Symbol;
             SetBenchmark(_idea);
             DefaultOrderProperties = new IndiaOrderProperties(exchange: Exchange.NSE);
-            Log("IDEA live monitor initialized. Strategy order submission is not implemented.");
+            Log("IDEA Live Monitor initialized. Strategy order submission is not implemented.");
         }
         /*
         public override void OnData(Slice slice)
