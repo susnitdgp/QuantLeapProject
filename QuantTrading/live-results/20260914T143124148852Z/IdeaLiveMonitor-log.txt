@@ -1,0 +1,6 @@
+Algorithm Initialization: Zerodha account base currency: INR
+2026-09-14 20:01:30 Launching analysis for IdeaLiveMonitor with LEAN Engine v2.5.0.0
+1997-12-31 19:00:00 Changing account currency from USD to INR...
+2026-09-14 20:01:30 Changing account currency from INR to INR...
+2026-09-14 20:01:30 Warning: No cash balances or holdings were found in the brokerage account.
+2026-09-14 20:01:30 IDEA live monitor initialized. Strategy order submission is not implemented.

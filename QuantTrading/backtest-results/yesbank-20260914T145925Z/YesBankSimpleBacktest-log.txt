@@ -1,0 +1,6 @@
+2019-07-09 00:00:00 Launching analysis for YesBankSimpleBacktest with LEAN Engine v2.5.0.0
+1997-12-31 19:00:00 Changing account currency from USD to INR...
+2019-07-09 09:16:00 Time: 07/09/2019 03:46:00 OrderID: 1 EventID: 1 Symbol: YESBANK Status: Submitted Quantity: 100
+2019-07-09 09:16:00 Time: 07/09/2019 03:46:00 OrderID: 1 EventID: 2 Symbol: YESBANK Status: Filled Quantity: 100 FillQuantity: 100 FillPrice: ₹94.85 OrderFee: 6 INR Message: Warning: No quote information available at 07/09/2019 09:16:00 Asia/Kolkata, order filled using TradeBar data
+2019-07-11 15:30:00 FINAL quantity=100 price=93.3000 equity=99839.0000
+2019-07-11 15:30:00 Algorithm Id:(YesBankSimpleBacktest) completed in 0.31 seconds at 4k data points per second. Processing total of 1,126 data points.

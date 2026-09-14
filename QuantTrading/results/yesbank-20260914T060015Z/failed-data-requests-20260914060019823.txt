@@ -1,4 +1,0 @@
-/equity/india/minute/yesbank/20190709_quote.zip
-/equity/india/minute/yesbank/20190710_quote.zip
-/equity/india/minute/yesbank/20190711_quote.zip
-/equity/india/hour/yesbank.zip
