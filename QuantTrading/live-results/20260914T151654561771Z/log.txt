@@ -1,0 +1,78 @@
+2026-09-14T15:16:56.3270018Z TRACE:: Engine.Main(): LEAN ALGORITHMIC TRADING ENGINE v2.5.0.0 Mode: DEBUG (64bit) Host: vmi3506951
+2026-09-14T15:16:56.3378392Z TRACE:: Engine.Main(): Started 20:46
+2026-09-14T15:16:56.3615574Z TRACE:: JobQueue.NextJob(): Selected QuantTrading.Algorithms.dll
+2026-09-14T15:16:57.2245247Z TRACE:: AlgorithmManager.CreateTokenBucket(): Initializing LeakyBucket: Capacity: 120 RefillAmount: 18 TimeInterval: 1440
+2026-09-14T15:16:57.2388305Z TRACE:: Engine.Run(): Resource limits '0' CPUs. 2147483647 MB RAM.
+2026-09-14T15:16:57.2394519Z TRACE:: TextSubscriptionDataSourceReader.SetCacheSize(): Setting cache size to 71582788 items
+2026-09-14T15:16:57.2479616Z TRACE:: Loader.TryCreateILAlgorithm(): Loading only the algorithm assembly
+2026-09-14T15:16:57.5374175Z TRACE:: Loader.TryCreateILAlgorithm(): Loaded IdeaLiveMonitor
+2026-09-14T15:16:57.5395433Z TRACE:: LocalObjectStore.Initialize(): Storage Root: /root/QuantLeapProject/QuantTrading/Runner/bin/Release/net10.0/storage. StorageFileCount 10000. StorageLimit 10240MB. StoragePermissions Read=True Write=True Delete=True
+2026-09-14T15:16:57.5399324Z TRACE:: LiveTradingDataFeed.GetDataChannelProvider(): will use DataChannelProvider
+2026-09-14T15:16:57.5411283Z TRACE:: BrokerageSetupHandler.CreateBrokerage(): creating brokerage 'ZerodhaBrokerage'
+2026-09-14T15:17:00.6976058Z TRACE:: ZerodhaBrokerage(): Zerodha Brokerage initialized
+2026-09-14T15:17:00.7173232Z TRACE:: CompositeDataQueueHandler.SetJob(): will use [
+  "ZerodhaBrokerage"
+]
+2026-09-14T15:17:00.7217562Z TRACE:: ZerodhaBrokerage.Connect(): Connecting...
+2026-09-14T15:17:00.7252422Z TRACE:: WebSocketClientWrapper connection task started: wss://ws.kite.trade/?api_key=mmtsd2ptc5pdmd8t&access_token=YfFUj1Nd17HXquB0QiDnmDCjqxrKoOq7
+2026-09-14T15:17:00.7271533Z TRACE:: WebSocketClientWrapper.HandleConnection(wss://ws.kite.trade/?api_key=mmtsd2ptc5pdmd8t&access_token=YfFUj1Nd17HXquB0QiDnmDCjqxrKoOq7): Connecting...
+2026-09-14T15:17:00.7919987Z TRACE:: WebSocketClientWrapper.OnOpen(): Connection opened (IsOpen:True, State:Open): wss://ws.kite.trade/?api_key=mmtsd2ptc5pdmd8t&access_token=YfFUj1Nd17HXquB0QiDnmDCjqxrKoOq7
+2026-09-14T15:17:00.7921378Z TRACE:: ZerodhaBrokerage(): WebSocket.Open. Subscribing
+2026-09-14T15:17:00.7978309Z TRACE:: BaseDataExchange(CustomDataExchange) Starting...
+2026-09-14T15:17:00.8048832Z TRACE:: HistoryProviderManager.Initialize(): history providers [BrokerageHistoryProvider,SubscriptionDataReaderHistoryProvider]
+2026-09-14T15:17:00.8093264Z TRACE:: BaseSetupHandler.Setup(LocalPlatform): UID: 540722, PID: 0, Version: 2.5.0.0, Source: WebIDE
+2026-09-14T15:17:00.8106751Z TRACE:: LiveTradingResultHandler.SendStatusUpdate(): status: 'LoggingIn'.  Logging into brokerage...
+2026-09-14T15:17:00.8110221Z TRACE:: BrokerageSetupHandler.Setup(): Connecting to brokerage...
+2026-09-14T15:17:00.8112822Z TRACE:: BrokerageSetupHandler.Setup(): Zerodha account base currency: INR
+2026-09-14T15:17:00.8159144Z TRACE:: SecurityPortfolioManager.SetAccountCurrency(): setting account currency to INR
+2026-09-14T15:17:00.8159562Z TRACE:: BrokerageSetupHandler.Setup(): Initializing algorithm...
+2026-09-14T15:17:00.8159762Z TRACE:: LiveTradingResultHandler.SendStatusUpdate(): status: 'Initializing'.  Initializing algorithm...
+2026-09-14T15:17:00.8829602Z TRACE:: BrokerageSetupHandler.Setup(): Fetching cash balance from brokerage...
+2026-09-14T15:17:00.9849748Z TRACE:: BrokerageSetupHandler.Setup(): Setting INR cash to 0
+2026-09-14T15:17:00.9867094Z TRACE:: BrokerageSetupHandler.Setup(): Fetching open orders from brokerage...
+2026-09-14T15:17:01.0284906Z TRACE:: BrokerageSetupHandler.Setup(): Fetching holdings from brokerage...
+2026-09-14T15:17:01.0724388Z TRACE:: AggregationManager.Initialize(): daily strict end times: True
+2026-09-14T15:17:01.1038912Z TRACE:: LiveTradingDataFeed.CreateUniverseSubscription(): Creating user defined universe: QC-UNIVERSE-USERDEFINED-INDIA-EQUITY UL
+2026-09-14T15:17:01.1089767Z TRACE:: DataManager.AddSubscription(): Added QC-UNIVERSE-USERDEFINED-INDIA-EQUITY,#0,QC-UNIVERSE-USERDEFINED-INDIA-EQUITY,Tick,Tick,Trade,Raw,OpenInterest,Internal. Start: 09/14/2026 15:17:00. End: 12/31/2050 00:00:00
+2026-09-14T15:17:01.1227660Z TRACE:: BaseSetupHandler.SetupCurrencyConversions():
+Account Type: Margin
+
+Symbol      Quantity    Conversion = Value in INR
+INR: ₹           0.00 @       1.00 = ₹0
+-------------------------------------------------
+CashBook Total Value:                ₹0
+
+2026-09-14T15:17:01.1249471Z TRACE:: Total margin information: TotalMarginUsed: 0.00, MarginRemaining: 0.00
+2026-09-14T15:17:01.1313456Z TRACE:: JOB HANDLERS:
+         DataFeed:             QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed
+         Setup:                QuantConnect.Lean.Engine.Setup.BrokerageSetupHandler
+         RealTime:             QuantConnect.Lean.Engine.RealTime.LiveTradingRealTimeHandler
+         Results:              QuantConnect.Lean.Engine.Results.LiveTradingResultHandler
+         Transactions:         QuantConnect.Lean.Engine.TransactionHandlers.BrokerageTransactionHandler
+         Object Store:         QuantConnect.Lean.Engine.Storage.LocalObjectStore
+         History Provider:     QuantConnect.Lean.Engine.HistoricalData.HistoryProviderManager
+         Brokerage:            QuantConnect.Brokerages.Zerodha.ZerodhaBrokerage
+         Data Provider:        QuantConnect.Lean.Engine.DataFeeds.DefaultDataProvider
+
+2026-09-14T15:17:01.1730154Z TRACE:: Event Name "Daily Sampling", scheduled to run.
+2026-09-14T15:17:01.1730954Z TRACE:: AlgorithmManager.Run(): Begin DataStream - Start: 09/14/2026 00:00:00 Stop: 12/31/2050 00:00:00 Time: 09/14/2026 20:47:00 Warmup: False
+2026-09-14T15:17:01.1743423Z TRACE:: LiveTradingResultHandler.SendStatusUpdate(): status: 'Running'. 
+2026-09-14T15:17:01.1750289Z TRACE:: ProcessVolatilityHistoryRequirements(): Updating volatility models with historical data...
+2026-09-14T15:17:01.1762680Z TRACE:: ProcessVolatilityHistoryRequirements(): finished.
+2026-09-14T15:17:01.4520812Z TRACE:: Debug: Zerodha account base currency: INR
+2026-09-14T15:17:01.4521371Z TRACE:: Debug: 2026-09-14 20:47:00 Launching analysis for IdeaLiveMonitor with LEAN Engine v2.5.0.0
+2026-09-14T15:17:02.0756726Z TRACE:: EventBasedDataQueueHandlerSubscriptionManager.Subscribe(): IDEA
+2026-09-14T15:17:02.0791868Z TRACE:: DataManager.AddSubscription(): Added IDEA,#0,IDEA,Tick,Tick,Trade,Raw,OpenInterest. Start: 09/14/2026 15:17:02. End: 12/30/2050 18:30:00
+2026-09-14T15:17:02.0831810Z TRACE:: DataManager.AddSubscription(): Added IDEA,#0,IDEA,Tick,Tick,Quote,Raw,OpenInterest. Start: 09/14/2026 15:17:02. End: 12/30/2050 18:30:00
+2026-09-14T15:17:02.0912094Z TRACE:: LiveMappingEventProvider(IDEA,#0,IDEA,Tick,Tick,Trade,Raw,OpenInterest): new tradable date 20260914. New MapFile: True. MapFile.Count Old: 0 New: 0
+2026-09-14T15:17:02.0994377Z TRACE:: DataManager.RemoveSubscription(): Removed QC-UNIVERSE-USERDEFINED-INDIA-EQUITY,#0,QC-UNIVERSE-USERDEFINED-INDIA-EQUITY,Tick,Tick,Trade,Raw,OpenInterest,Internal
+2026-09-14T15:17:02.0997635Z TRACE:: LiveMappingEventProvider(IDEA,#0,IDEA,Tick,Tick,Quote,Raw,OpenInterest): new tradable date 20260914. New MapFile: True. MapFile.Count Old: 0 New: 0
+2026-09-14T15:17:02.1086461Z TRACE:: DataManager.AddSubscription(): Added IDEA,#0,IDEA,Minute,TradeBar,Trade,Adjusted,OpenInterest,Internal. Start: 09/14/2026 09:59:00. End: 12/30/2050 18:30:00
+2026-09-14T15:17:02.1087349Z TRACE:: UniverseSelection.AddPendingInternalDataFeeds(): Adding internal benchmark data feed IDEA,#0,IDEA,Minute,TradeBar,Trade,Adjusted,OpenInterest,Internal
+2026-09-14T15:17:02.1091856Z TRACE:: LiveMappingEventProvider(IDEA,#0,IDEA,Minute,TradeBar,Trade,Adjusted,OpenInterest,Internal): new tradable date 20260914. New MapFile: True. MapFile.Count Old: 0 New: 0
+2026-09-14T15:17:02.4524110Z TRACE:: Debug: 1997-12-31 19:00:00 Changing account currency from USD to INR...
+2026-09-14T15:17:02.4524659Z TRACE:: Debug: 2026-09-14 20:47:00 Changing account currency from INR to INR...
+2026-09-14T15:17:02.4524709Z TRACE:: Debug: 2026-09-14 20:47:00 Warning: No cash balances or holdings were found in the brokerage account.
+2026-09-14T15:17:02.4534816Z TRACE:: Log: 2026-09-14 20:47:00 IDEA Live Monitor initialized
+2026-09-14T15:17:02.4535246Z TRACE:: Log: 2026-09-14 20:47:00 Strategy order submission is not implemented.
+2026-09-14T15:17:06.2126686Z TRACE:: Program.ExitKeyPress(): Lean instance has been cancelled, shutting down safely now

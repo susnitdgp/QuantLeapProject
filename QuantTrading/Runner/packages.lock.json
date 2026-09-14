@@ -359,6 +359,14 @@
           "Plotly.NET": "[5.0.0, 6.0.0)"
         }
       },
+      "ProDotNetZip": {
+        "type": "Transitive",
+        "resolved": "1.20.0",
+        "contentHash": "3UQ+ZARja9UbUhIi21UmFxcPiSOg12HdfQvWvnyMjSfWTWIuWitH4XXOKgV7wk9wHZj0f0olOJYFAK52encGZg==",
+        "dependencies": {
+          "System.Security.Permissions": "8.0.0"
+        }
+      },
       "protobuf-net": {
         "type": "Transitive",
         "resolved": "3.1.33",
@@ -738,10 +746,10 @@
       },
       "System.Security.Permissions": {
         "type": "Transitive",
-        "resolved": "4.7.0",
-        "contentHash": "dkOV6YYVBnYRa15/yv004eCGRBVADXw8qRbbNiCn/XpdJSUXkkUeIvdvFHkvnko4CdKMqG8yRHC4ox83LSlMsQ==",
+        "resolved": "8.0.0",
+        "contentHash": "v/BBylw7XevuAsHXoX9dDUUfmBIcUf7Lkz8K3ZXIKz3YRKpw8YftpSir4n4e/jDTKFoaK37AsC3xnk+GNFI1Ow==",
         "dependencies": {
-          "System.Windows.Extensions": "4.7.0"
+          "System.Windows.Extensions": "8.0.0"
         }
       },
       "System.ServiceModel.Primitives": {
@@ -755,17 +763,16 @@
       },
       "System.Windows.Extensions": {
         "type": "Transitive",
-        "resolved": "4.7.0",
-        "contentHash": "CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
-        "dependencies": {
-          "System.Drawing.Common": "4.7.0"
-        }
+        "resolved": "8.0.0",
+        "contentHash": "Obg3a90MkOw9mYKxrardLpY2u0axDMrSmy4JCdq2cYbelM2cUwmUir5Bomvd1yxmPL9h5LVHU1tuKBZpUjfASg=="
       },
       "quantconnect.zerodhabrokerage": {
         "type": "Project",
         "dependencies": {
           "NodaTime": "[3.0.5, )",
-          "QuantConnect.Brokerages": "[2.5.*, )"
+          "ProDotNetZip": "[1.20.0, )",
+          "QuantConnect.Brokerages": "[2.5.*, )",
+          "System.Drawing.Common": "[4.7.2, )"
         }
       },
       "quanttrading.algorithms": {
