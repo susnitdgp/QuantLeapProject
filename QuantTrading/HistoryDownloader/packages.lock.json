@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net10.0": {
+      "System.Drawing.Common": {
+        "type": "Direct",
+        "requested": "[4.7.2, )",
+        "resolved": "4.7.2",
+        "contentHash": "I2y4KBK3VCvU/WqE2xv7NjQ67maXHttkFSHYKgU2evrG9Yqh0oFjfORXt5hZTk+BVjdyFo2h0/YQZsca33BGmg==",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.1.4",
+          "Microsoft.Win32.SystemEvents": "4.7.0"
+        }
+      },
+      "Tech.Zerodha.KiteConnect": {
+        "type": "Direct",
+        "requested": "[5.2.1, )",
+        "resolved": "5.2.1",
+        "contentHash": "H+EvPDc5GH5otcJveK59wE6dWcE1WBGfoC7zHUevhxNN4G7geO9j36kO7EegzuCHi4IX3PlrvJsBaeXoF3+sGA==",
+        "dependencies": {
+          "CsvTextFieldParser": "1.2.2"
+        }
+      },
+      "CsvTextFieldParser": {
+        "type": "Transitive",
+        "resolved": "1.2.2",
+        "contentHash": "hTa2L7IOiTuNFONKormYjKZshm4UiEh74CUO7dc5/3cxuVGzfpmRtuKtpEpVmgvhFu0M4niZ9WxVpIM5CdELNQ=="
+      },
+      "Microsoft.NETCore.Platforms": {
+        "type": "Transitive",
+        "resolved": "3.1.4",
+        "contentHash": "9/y05/CuxE+j184Nr4KihhB9KcUkvGojmD4JV4Vt/mHhVZR+eOCD5WCM+CXye9K0OFMsaPXbN+IcaIpjgBGZmg=="
+      },
+      "Microsoft.Win32.SystemEvents": {
+        "type": "Transitive",
+        "resolved": "4.7.0",
+        "contentHash": "mtVirZr++rq+XCDITMUdnETD59XoeMxSpLRIII7JRI6Yj0LEDiO1pPn0ktlnIj12Ix8bfvQqQDMMIF9wC98oCA==",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.1.0"
+        }
+      }
+    }
+  }
+}

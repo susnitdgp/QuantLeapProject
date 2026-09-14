@@ -1,0 +1,1 @@
+<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><AssemblyName>QuantTrading.Algorithms</AssemblyName></PropertyGroup><ItemGroup><PackageReference Include="QuantConnect.Algorithm" Version="$(LeanVersion)" /></ItemGroup></Project>

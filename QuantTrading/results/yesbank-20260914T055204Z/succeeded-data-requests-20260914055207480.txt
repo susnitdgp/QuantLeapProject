@@ -1,0 +1,5 @@
+/equity/india/minute/yesbank/20190709_trade.zip
+/equity/india/minute/yesbank/20190710_trade.zip
+/equity/india/minute/yesbank/20190711_trade.zip
+/alternative/interest-rate/usa/interest-rate.csv
+/equity/usa/daily/spy.zip

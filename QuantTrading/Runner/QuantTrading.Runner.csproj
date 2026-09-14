@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="../Algorithms/QuantTrading.Algorithms.csproj" />
+		<ProjectReference Include="../../Lean.Brokerages.Zerodha/QuantConnect.ZerodhaBrokerage/QuantConnect.ZerodhaBrokerage.csproj" />
+		<PackageReference Include="QuantConnect.Lean" Version="$(LeanVersion)" />
+		<!-- <PackageReference Include="QuantConnect.ZerodhaBrokerage" Version="$(LeanVersion)" /> -->
+		<PackageReference Include="NetMQ" Version="4.0.4.3" />
+		<PackageReference Include="System.Security.Cryptography.Xml" Version="10.0.12" />
+	</ItemGroup>
+</Project>

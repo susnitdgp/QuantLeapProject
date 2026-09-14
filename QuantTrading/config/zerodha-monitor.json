@@ -1,0 +1,44 @@
+{
+  "environment": "live-zerodha",
+  "live-mode": true,
+  "algorithm-type-name": "IdeaLiveMonitor",
+  "algorithm-language": "CSharp",
+  "algorithm-location": "QuantTrading.Algorithms.dll",
+  "data-folder": "/root/QuantTrading/Data",
+  "close-automatically": true,
+  "log-handler": "QuantConnect.Logging.CompositeLogHandler",
+  "messaging-handler": "QuantConnect.Messaging.Messaging",
+  "job-queue-handler": "QuantConnect.Queues.JobQueue",
+  "api-handler": "QuantConnect.Api.Api",
+  "map-file-provider": "QuantConnect.Data.Auxiliary.LocalDiskMapFileProvider",
+  "factor-file-provider": "QuantConnect.Data.Auxiliary.LocalDiskFactorFileProvider",
+  "data-provider": "QuantConnect.Lean.Engine.DataFeeds.DefaultDataProvider",
+  "data-channel-provider": "DataChannelProvider",
+  "object-store": "QuantConnect.Lean.Engine.Storage.LocalObjectStore",
+  "data-aggregator": "QuantConnect.Lean.Engine.DataFeeds.AggregationManager",
+  "job-user-id": "540722",
+  "api-access-token": "7e6f2d62189d595e67aa386f84c9fc110b204069504b69a0f83ca5fb54562b22",
+  "job-organization-id": "SUSANTA-GOSWAMI",
+  "parameters": {},
+  "environments": {
+    "live-zerodha": {
+      "live-mode": true,
+      "live-mode-brokerage": "ZerodhaBrokerage",
+      "data-queue-handler": [
+        "ZerodhaBrokerage"
+      ],
+      "setup-handler": "QuantConnect.Lean.Engine.Setup.BrokerageSetupHandler",
+      "result-handler": "QuantConnect.Lean.Engine.Results.LiveTradingResultHandler",
+      "data-feed-handler": "QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed",
+      "real-time-handler": "QuantConnect.Lean.Engine.RealTime.LiveTradingRealTimeHandler",
+      "transaction-handler": "QuantConnect.Lean.Engine.TransactionHandlers.BrokerageTransactionHandler",
+      "history-provider": [
+        "BrokerageHistoryProvider",
+        "SubscriptionDataReaderHistoryProvider"
+      ]
+    }
+  },
+  "zerodha-product-type": "MIS",
+  "zerodha-trading-segment": "EQUITY",
+  "zerodha-history-subscription": "true"
+}

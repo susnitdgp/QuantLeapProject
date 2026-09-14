@@ -1,0 +1,111 @@
+2026-09-14T06:26:25.4585894Z TRACE:: Engine.Main(): LEAN ALGORITHMIC TRADING ENGINE v2.5.0.0 Mode: DEBUG (64bit) Host: vmi3506951
+2026-09-14T06:26:25.4681304Z TRACE:: Engine.Main(): Started 11:56
+2026-09-14T06:26:25.4937163Z TRACE:: JobQueue.NextJob(): Selected QuantTrading.Algorithms.dll
+2026-09-14T06:26:25.5419248Z TRACE:: AlgorithmManager.CreateTokenBucket(): Initializing LeakyBucket: Capacity: 120 RefillAmount: 18 TimeInterval: 1440
+2026-09-14T06:26:25.5503465Z TRACE:: Engine.Run(): Resource limits '0' CPUs. 2147483647 MB RAM.
+2026-09-14T06:26:25.5510136Z TRACE:: TextSubscriptionDataSourceReader.SetCacheSize(): Setting cache size to 71582788 items
+2026-09-14T06:26:26.4013222Z TRACE:: Loader.TryCreateILAlgorithm(): Loading only the algorithm assembly
+2026-09-14T06:26:26.7677602Z TRACE:: Loader.TryCreateILAlgorithm(): Loaded YesBankSimpleBacktest
+2026-09-14T06:26:26.7702443Z TRACE:: LocalObjectStore.Initialize(): Storage Root: /root/QuantTrading/Runner/bin/Release/net10.0/storage. StorageFileCount 10000. StorageLimit 10240MB. StoragePermissions Read=True Write=True Delete=True
+2026-09-14T06:26:26.7859985Z TRACE:: HistoryProviderManager.Initialize(): history providers [SubscriptionDataReaderHistoryProvider]
+2026-09-14T06:26:26.7902830Z TRACE:: BaseSetupHandler.Setup(LocalPlatform): UID: 0, PID: 0, Version: 2.5.0.0, Source: WebIDE
+2026-09-14T06:26:26.8038389Z TRACE:: SecurityPortfolioManager.SetAccountCurrency(): setting account currency to INR
+2026-09-14T06:26:26.9294028Z TRACE:: WeightedWorkScheduler(): will use 8 workers and MaxWorkWeight is 400
+2026-09-14T06:26:26.9502321Z TRACE:: BaseSetupHandler.SetupCurrencyConversions():
+Account Type: Margin
+
+Symbol      Quantity    Conversion = Value in INR
+INR: ₹      100000.00 @       1.00 = ₹100000
+-------------------------------------------------
+CashBook Total Value:                ₹100000
+
+2026-09-14T06:26:26.9527214Z TRACE:: Total margin information: TotalMarginUsed: 0.00, MarginRemaining: 100000.00
+2026-09-14T06:26:26.9530619Z TRACE:: SetUp Backtesting: User: 0 ProjectId: 0 AlgoId: YesBankSimpleBacktest
+2026-09-14T06:26:26.9532427Z TRACE:: Dates: Start: 07/09/2019 End: 07/11/2019 Cash: ¤100,000.00 MaximumRuntime: 100.00:00:00 MaxOrders: 2147483647
+2026-09-14T06:26:26.9589965Z TRACE:: BacktestingResultHandler(): Sample Period Set: 04.00
+2026-09-14T06:26:26.9595302Z TRACE:: JOB HANDLERS:
+         DataFeed:             QuantConnect.Lean.Engine.DataFeeds.FileSystemDataFeed
+         Setup:                QuantConnect.Lean.Engine.Setup.BacktestingSetupHandler
+         RealTime:             QuantConnect.Lean.Engine.RealTime.BacktestingRealTimeHandler
+         Results:              QuantConnect.Lean.Engine.Results.BacktestingResultHandler
+         Transactions:         QuantConnect.Lean.Engine.TransactionHandlers.BacktestingTransactionHandler
+         Object Store:         QuantConnect.Lean.Engine.Storage.LocalObjectStore
+         History Provider:     QuantConnect.Lean.Engine.HistoricalData.HistoryProviderManager
+         Brokerage:            QuantConnect.Brokerages.Backtesting.BacktestingBrokerage
+         Data Provider:        QuantConnect.Lean.Engine.DataFeeds.DefaultDataProvider
+
+2026-09-14T06:26:26.9773387Z TRACE:: Event Name "Daily Sampling", scheduled to run.
+2026-09-14T06:26:26.9774633Z TRACE:: AlgorithmManager.Run(): Begin DataStream - Start: 07/09/2019 00:00:00 Stop: 07/11/2019 23:59:59 Time: 07/09/2019 00:00:00 Warmup: False
+2026-09-14T06:26:27.0338860Z TRACE:: Debug: 2019-07-09 00:00:00 Launching analysis for YesBankSimpleBacktest with LEAN Engine v2.5.0.0
+2026-09-14T06:26:27.0854205Z TRACE:: UniverseSelection.AddPendingInternalDataFeeds(): Adding internal benchmark data feed YESBANK,#0,YESBANK,Hour,TradeBar,Trade,Adjusted,OpenInterest,Internal
+2026-09-14T06:26:27.1844921Z TRACE:: Debug: 1998-01-01 00:00:00 Changing account currency from USD to INR...
+2026-09-14T06:26:27.2356036Z TRACE:: Log: 2019-07-09 09:16:00 Time: 07/09/2019 03:46:00 OrderID: 1 EventID: 1 Symbol: YESBANK Status: Submitted Quantity: 100
+2026-09-14T06:26:27.2356570Z TRACE:: Log: 2019-07-09 09:16:00 Time: 07/09/2019 03:46:00 OrderID: 1 EventID: 2 Symbol: YESBANK Status: Filled Quantity: 100 FillQuantity: 100 FillPrice: ₹94.85 OrderFee: 6 INR Message: Warning: No quote information available at 07/09/2019 09:16:00 Asia/Kolkata, order filled using TradeBar data
+2026-09-14T06:26:27.2597808Z TRACE:: Synchronizer.GetEnumerator(): Exited thread.
+2026-09-14T06:26:27.2604363Z TRACE:: AlgorithmManager.Run(): Firing On End Of Algorithm...
+2026-09-14T06:26:27.2614572Z TRACE:: Engine.Run(): Exiting Algorithm Manager
+2026-09-14T06:26:27.2634160Z TRACE:: OrderRequestProcessingPool.Dispose(): completed
+2026-09-14T06:26:27.2643979Z TRACE:: StopSafely(): Waiting for 'Isolator Thread' thread to stop...
+2026-09-14T06:26:27.2651739Z TRACE:: FileSystemDataFeed.Exit(): Start. Setting cancellation token...
+2026-09-14T06:26:27.2671092Z TRACE:: FileSystemDataFeed.Exit(): Exit Finished.
+2026-09-14T06:26:27.2673642Z TRACE:: BacktestingResultHandler.Exit(): starting...
+2026-09-14T06:26:27.2676913Z TRACE:: BacktestingResultHandler.Exit(): Saving logs...
+2026-09-14T06:26:27.2689262Z TRACE:: StopSafely(): Waiting for 'Result Thread' thread to stop...
+2026-09-14T06:26:27.2689610Z TRACE:: Log: 2019-07-11 15:30:00 FINAL quantity=100 price=93.3000 equity=99839.0000
+2026-09-14T06:26:27.2689892Z TRACE:: Debug: 2019-07-11 15:30:00 Algorithm Id:(YesBankSimpleBacktest) completed in 0.30 seconds at 4k data points per second. Processing total of 1,126 data points.
+2026-09-14T06:26:27.2689961Z TRACE:: Debug: 2019-07-11 15:30:00 Your log was successfully created and can be retrieved from: /root/QuantTrading/results/yesbank-20260914T062623Z/YesBankSimpleBacktest-log.txt
+2026-09-14T06:26:27.2690001Z TRACE:: BacktestingResultHandler.Run(): Ending Thread...
+2026-09-14T06:26:27.5954351Z TRACE:: 
+STATISTICS:: Total Orders 1
+STATISTICS:: Average Win 0%
+STATISTICS:: Average Loss 0%
+STATISTICS:: Compounding Annual Return -19.931%
+STATISTICS:: Drawdown 0.600%
+STATISTICS:: Expectancy 0
+STATISTICS:: Start Equity 100000
+STATISTICS:: End Equity 99839
+STATISTICS:: Net Profit -0.161%
+STATISTICS:: Sharpe Ratio 10.456
+STATISTICS:: Sortino Ratio 0
+STATISTICS:: Probabilistic Sharpe Ratio 0%
+STATISTICS:: Loss Rate 0%
+STATISTICS:: Win Rate 0%
+STATISTICS:: Profit-Loss Ratio 0
+STATISTICS:: Alpha 0
+STATISTICS:: Beta 0
+STATISTICS:: Annual Standard Deviation 0.011
+STATISTICS:: Annual Variance 0
+STATISTICS:: Information Ratio 13.262
+STATISTICS:: Tracking Error 0.011
+STATISTICS:: Treynor Ratio 0
+STATISTICS:: Total Fees ₹6.00
+STATISTICS:: Estimated Strategy Capacity ₹370000000.00
+STATISTICS:: Lowest Capacity Asset YESBANK UL
+STATISTICS:: Portfolio Turnover 3.17%
+STATISTICS:: Drawdown Recovery 0
+STATISTICS:: OrderListHash e12a30df94880a0461396dd8acdbb164
+2026-09-14T06:26:27.5954711Z TRACE:: BacktestingResultHandler.SendAnalysisResult(): Processed final packet
+2026-09-14T06:26:27.5958990Z TRACE:: Engine.Run(): Disconnecting from brokerage...
+2026-09-14T06:26:27.5959567Z TRACE:: Engine.Run(): Disposing of setup handler...
+2026-09-14T06:26:27.5959771Z TRACE:: Engine.Main(): Analysis Completed and Results Posted.
+2026-09-14T06:26:27.5961949Z TRACE:: DataMonitor.Exit(): start...
+2026-09-14T06:26:27.5962416Z TRACE:: StopSafely(): Waiting for '' thread to stop...
+2026-09-14T06:26:27.5975505Z TRACE:: DataMonitor.GenerateReport():
+DATA USAGE:: Total data requests 9
+DATA USAGE:: Succeeded data requests 4
+DATA USAGE:: Failed data requests 5
+DATA USAGE:: Failed data requests percentage 56%
+DATA USAGE:: Total universe data requests 0
+DATA USAGE:: Succeeded universe data requests 0
+DATA USAGE:: Failed universe data requests 0
+DATA USAGE:: Failed universe data requests percentage 0%
+2026-09-14T06:26:27.6038547Z TRACE:: DataMonitor.Exit(): end
+2026-09-14T06:26:27.6046161Z TRACE:: Engine.Main(): Packet removed from queue: YesBankSimpleBacktest
+2026-09-14T06:26:27.6047285Z TRACE:: LeanEngineSystemHandlers.Dispose(): start...
+2026-09-14T06:26:27.6055926Z TRACE:: LeanEngineSystemHandlers.Dispose(): Disposed of system handlers.
+2026-09-14T06:26:27.6057921Z TRACE:: LeanEngineAlgorithmHandlers.Dispose(): start...
+2026-09-14T06:26:27.6059816Z TRACE:: LocalObjectStore.Dispose(): start...
+2026-09-14T06:26:27.6062426Z TRACE:: LocalObjectStore.Dispose(): end
+2026-09-14T06:26:27.6064547Z TRACE:: LeanEngineAlgorithmHandlers.Dispose(): Disposed of algorithm handlers.
+2026-09-14T06:26:27.6066209Z TRACE:: StopSafely(): Waiting for 'CpuPerformance' thread to stop...
+2026-09-14T06:26:27.6074012Z TRACE:: Program.Main(): Exiting Lean...

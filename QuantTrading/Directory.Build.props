@@ -1,0 +1,1 @@
+<Project><PropertyGroup><TargetFramework>net10.0</TargetFramework><LeanVersion>2.5.18042</LeanVersion><RestorePackagesWithLockFile>true</RestorePackagesWithLockFile><NuGetAudit>false</NuGetAudit><NuGetAuditMode>all</NuGetAuditMode></PropertyGroup><ItemGroup><PackageReference Include="System.Drawing.Common" Version="4.7.2" /></ItemGroup></Project>
