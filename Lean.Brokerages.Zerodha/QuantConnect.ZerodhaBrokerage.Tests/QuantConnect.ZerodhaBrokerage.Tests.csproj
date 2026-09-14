@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <TargetFramework>net10.0</TargetFramework>
+
+        <IsPackable>false</IsPackable>
+        <Copyright>Copyright ©  2021</Copyright>
+        <TestProjectType>UnitTest</TestProjectType>
+        <OutputPath>bin\$(Configuration)\</OutputPath>
+        <Product>QuantConnect.ZerodhaBrokerage.Tests</Product>
+        <AssemblyName>QuantConnect.ZerodhaBrokerage.Tests</AssemblyName>
+        <RootNamespace>QuantConnect.ZerodhaBrokerage.Tests</RootNamespace>
+        <AssemblyTitle>QuantConnect.ZerodhaBrokerage.Tests</AssemblyTitle>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Moq" Version="4.16.1" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+        <PackageReference Include="NUnit" Version="4.2.2" />
+        <PackageReference Include="NUnit3TestAdapter" Version="4.6.0">
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
+    </ItemGroup>
+    <ItemGroup>
+        <Using Include="NUnit.Framework.Legacy.ClassicAssert" Alias="Assert" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Lean\Tests\QuantConnect.Tests.csproj" />
+      <ProjectReference Include="..\..\Lean\Engine\QuantConnect.Lean.Engine.csproj" />
+      <ProjectReference Include="..\QuantConnect.ZerodhaBrokerage\QuantConnect.ZerodhaBrokerage.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="config.json" />
+        <Content Include="config.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+</Project>
