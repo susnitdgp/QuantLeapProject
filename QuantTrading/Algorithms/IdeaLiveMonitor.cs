@@ -2,6 +2,7 @@ using System;
 using QuantConnect.Data;
 using QuantConnect.Orders;
 using QuantConnect.Brokerages;
+using QuantConnect.Data.Market; 
 
 namespace QuantConnect.Algorithm.CSharp
 {
