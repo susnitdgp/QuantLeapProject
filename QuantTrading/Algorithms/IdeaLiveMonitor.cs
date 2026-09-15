@@ -10,36 +10,52 @@ namespace QuantConnect.Algorithm.CSharp
     public class IdeaLiveMonitor : QCAlgorithm
     {
         private Symbol _idea;
-        private DateTime _nextLog = DateTime.MinValue;
 
         public override void Initialize()
         {
-            if (!LiveMode) throw new InvalidOperationException("Live monitor only");
+            if (!LiveMode)
+            {
+                throw new InvalidOperationException("Local live monitor only.");
+            }
 
             SetTimeZone("Asia/Kolkata");
             SetAccountCurrency("INR");
             SetBrokerageModel(BrokerageName.Zerodha, AccountType.Margin);
 
-            // 1. Subscribe using Second resolution (reliably aggregated from Kite stream)
-            _idea = AddEquity("IDEA", Resolution.Second, Market.India,
-                fillForward: true, dataNormalizationMode: DataNormalizationMode.Raw).Symbol;
+            DefaultOrderProperties = new IndiaOrderProperties(Exchange.NSE)
+            {
+                ProductType = IndiaProductType.MIS
+            };
 
+            // Raw tick/second aggregation
+            var equity = AddEquity("IDEA", Resolution.Second, Market.India,
+                fillForward: true, 
+                dataNormalizationMode: DataNormalizationMode.Raw);
+
+            _idea = equity.Symbol;
             SetBenchmark(_idea);
-            DefaultOrderProperties = new IndiaOrderProperties(exchange: Exchange.NSE);
 
-            Log("[INIT] IDEA Live Monitor initialized successfully on Zerodha feed.");
+            Log($"[LOCAL INIT] Started live monitoring for {_idea} via Zerodha.");
         }
 
         public override void OnData(Slice slice)
         {
-            if (Securities.TryGetValue(_idea, out var security))
+            // Verify security has valid market data
+            if (!Securities.TryGetValue(_idea, out var security) || !security.HasData)
             {
-                // Zerodha populates day volume on the Security object from REST/Quote snapshots
-                decimal totalDayVolume = security.Volume;
-                decimal currentLtp = security.Price;
-        
-                Log($"[SECURITY SNAPSHOT] {Time:HH:mm:ss} | Price: ₹{currentLtp} | Day Volume: {totalDayVolume:N0}");
+                return;
             }
+
+            decimal currentPrice = security.Price;
+
+            // Bar volume for the 1-second period
+            decimal barVolume = slice.Bars.TryGetValue(_idea, out var bar) ? bar.Volume : 0m;
+
+            // Day's cumulative traded volume reported by Kite
+            decimal dayVolume = security.Volume;
+
+            // High-throughput local stdout
+            Console.WriteLine($"[{Time:HH:mm:ss}] LTP: ₹{currentPrice:F2} | 1s-Vol: {barVolume:N0} | Day-Vol: {dayVolume:N0}");
         }
     }
 }
