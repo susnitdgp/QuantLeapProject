@@ -32,27 +32,13 @@ namespace QuantConnect.Algorithm.CSharp
 
         public override void OnData(Slice slice)
         {
-            // Throttle logging to once every 10 seconds
-            if (Time < _nextLog) return;
-
-            // Check TradeBar stream (primary for live Zerodha feed)
-            if (slice.Bars.TryGetValue(_idea, out var bar))
+            if (Securities.TryGetValue(_idea, out var security))
             {
-                _nextLog = Time.AddSeconds(10);
-                Log($"[BAR FEED] {Time:yyyy-MM-dd HH:mm:ss} IST | Close/LTP = ₹{bar.Close} | Vol = {bar.Volume} | High = ₹{bar.High} | Low = ₹{bar.Low}");
-            }
-            // Check Raw Tick stream if available
-            else if (slice.Ticks.TryGetValue(_idea, out var tickList) && tickList.Count > 0)
-            {
-                _nextLog = Time.AddSeconds(10);
-                var latestTick = tickList[tickList.Count - 1];
-                Log($"[TICK FEED] {Time:yyyy-MM-dd HH:mm:ss} IST | Ticks = {tickList.Count} | LTP = ₹{latestTick.Price} | Vol = {latestTick.Quantity}");
-            }
-            // Fallback to cache
-            else if (Securities.ContainsKey(_idea) && Securities[_idea].Price > 0)
-            {
-                _nextLog = Time.AddSeconds(10);
-                Log($"[SECURITIES CACHE] {Time:yyyy-MM-dd HH:mm:ss} IST | Cached LTP = ₹{Securities[_idea].Price}");
+                // Zerodha populates day volume on the Security object from REST/Quote snapshots
+                decimal totalDayVolume = security.Volume;
+                decimal currentLtp = security.Price;
+        
+                Log($"[SECURITY SNAPSHOT] {Time:HH:mm:ss} | Price: ₹{currentLtp} | Day Volume: {totalDayVolume:N0}");
             }
         }
     }
