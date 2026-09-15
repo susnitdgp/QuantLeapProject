@@ -10,6 +10,7 @@ namespace QuantConnect.Algorithm.CSharp
     public class IdeaLiveMonitor : QCAlgorithm
     {
         private Symbol _idea;
+        private bool _orderSubmitted = false;
 
         public override void Initialize()
         {
@@ -23,9 +24,9 @@ namespace QuantConnect.Algorithm.CSharp
             SetBrokerageModel(BrokerageName.Zerodha, AccountType.Margin);
 
             DefaultOrderProperties = new IndiaOrderProperties(
-    Exchange.NSE, 
-    IndiaOrderProperties.IndiaProductType.MIS
-);
+                Exchange.NSE, 
+                IndiaOrderProperties.IndiaProductType.MIS
+            );
 
             // Raw tick/second aggregation
             var equity = AddEquity("IDEA", Resolution.Second, Market.India,
@@ -37,25 +38,28 @@ namespace QuantConnect.Algorithm.CSharp
 
             Log($"[LOCAL INIT] Started live monitoring for {_idea} via Zerodha.");
         }
-
+    
         public override void OnData(Slice slice)
         {
-            // Verify security has valid market data
-            if (!Securities.TryGetValue(_idea, out var security) || !security.HasData)
-            {
+            // Wait until security data is ready
+            if (!Securities.TryGetValue(_idea, out var security) || !security.HasData) 
                 return;
+        
+            // Buy 1 share once if no position is currently held
+            if (!_orderSubmitted && !Portfolio[_idea].Invested)
+            {
+                var ticket = MarketOrder(_idea, 1);
+                _orderSubmitted = true;
+        
+                Log($"[ORDER SENT] MarketOrder submitted for 1 qty {_idea}. Order ID: {ticket.OrderId}");
             }
-
-            decimal currentPrice = security.Price;
-
-            // Bar volume for the 1-second period
-            decimal barVolume = slice.Bars.TryGetValue(_idea, out var bar) ? bar.Volume : 0m;
-
-            // Day's cumulative traded volume reported by Kite
-            decimal dayVolume = security.Volume;
-
-            // High-throughput local stdout
-            Console.WriteLine($"[{Time:HH:mm:ss}] LTP: ₹{currentPrice:F2} | 1s-Vol: {barVolume:N0} | Day-Vol: {dayVolume:N0}");
+        }
+        public override void OnOrderEvent(OrderEvent orderEvent)
+        {
+            if (orderEvent.Status == OrderStatus.Filled)
+            {
+                Log($"[ORDER FILLED] {orderEvent.Symbol} filled {orderEvent.FillQuantity} shares @ ₹{orderEvent.FillPrice:F2}");
+            }
         }
     }
 }
