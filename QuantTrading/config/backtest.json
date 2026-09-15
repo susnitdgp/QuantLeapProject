@@ -16,9 +16,9 @@
   "data-channel-provider": "DataChannelProvider",
   "object-store": "QuantConnect.Lean.Engine.Storage.LocalObjectStore",
   "data-aggregator": "QuantConnect.Lean.Engine.DataFeeds.AggregationManager",
-  "job-user-id": "0",
-  "api-access-token": "",
-  "job-organization-id": "",
+  "job-user-id": "540722",
+  "api-access-token": "7e6f2d62189d595e67aa386f84c9fc110b204069504b69a0f83ca5fb54562b22",
+  "job-organization-id": "SUSANTA-GOSWAMI",
   "parameters": {},
   "environments": {
     "backtesting": {
