@@ -21,7 +21,7 @@ namespace QuantConnect.Algorithm.CSharp
 
             SetTimeZone("Asia/Kolkata");
             SetAccountCurrency("INR");
-            SetCash(500)
+            SetCash(500);
             SetBrokerageModel(BrokerageName.Zerodha, AccountType.Margin);
 
             DefaultOrderProperties = new IndiaOrderProperties(
