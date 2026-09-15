@@ -771,7 +771,7 @@ namespace QuantConnect.Brokerages.Zerodha
             return holdingsList;
         }
 
-    public override List<CashAmount> GetCashBalance()
+        public override List<CashAmount> GetCashBalance()
         {
             var list = new List<CashAmount>();
             decimal amt = 0m;
@@ -779,28 +779,26 @@ namespace QuantConnect.Brokerages.Zerodha
             try
             {
                 var response = _kite.GetMargins();
-                
-                if (response != null)
+                var isEquity = string.Equals(_tradingSegment, "EQUITY", StringComparison.OrdinalIgnoreCase);
+                var segment = isEquity ? response.Equity : response.Commodity;
+        
+                // In the Kite .NET SDK, Live_balance tracks intraday liquid cash.
+                // Fall back to segment.Available.Cash, then total segment.Net margin.
+                decimal liveBal = Convert.ToDecimal(segment.Available.Live_balance, CultureInfo.InvariantCulture);
+                decimal cashBal = Convert.ToDecimal(segment.Available.Cash, CultureInfo.InvariantCulture);
+                decimal netBal = Convert.ToDecimal(segment.Net, CultureInfo.InvariantCulture);
+        
+                if (liveBal != 0m)
                 {
-                    var isEquity = string.Equals(_tradingSegment, "EQUITY", StringComparison.OrdinalIgnoreCase);
-                    var segment = isEquity ? response.Equity : response.Commodity;
-        
-                    if (segment != null)
-                    {
-                        // Prefer LiveBalance (real-time trading margin), fallback to Cash, then Net
-                        if (segment.Available != null)
-                        {
-                            amt = Convert.ToDecimal(
-                                segment.Available.LiveBalance != 0 ? segment.Available.LiveBalance : segment.Available.Cash, 
-                                CultureInfo.InvariantCulture
-                            );
-                        }
-        
-                        if (amt == 0m && segment.Net != 0)
-                        {
-                            amt = Convert.ToDecimal(segment.Net, CultureInfo.InvariantCulture);
-                        }
-                    }
+                    amt = liveBal;
+                }
+                else if (cashBal != 0m)
+                {
+                    amt = cashBal;
+                }
+                else
+                {
+                    amt = netBal;
                 }
             }
             catch (Exception err)
@@ -808,10 +806,7 @@ namespace QuantConnect.Brokerages.Zerodha
                 Log.Error($"[ZerodhaBrokerage.GetCashBalance] Failed to fetch margins from Kite: {err.Message}");
             }
         
-            // Ensure currency code defaults to INR if AccountBaseCurrency is unassigned
             var currency = string.IsNullOrWhiteSpace(AccountBaseCurrency) ? "INR" : AccountBaseCurrency;
-        
-            // Return the balance (even if zero) so LEAN knows the currency exists
             list.Add(new CashAmount(amt, currency));
             return list;
         }
