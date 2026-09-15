@@ -771,7 +771,7 @@ namespace QuantConnect.Brokerages.Zerodha
             return holdingsList;
         }
 
-        public override List<CashAmount> GetCashBalance()
+      public override List<CashAmount> GetCashBalance()
         {
             var list = new List<CashAmount>();
             decimal amt = 0m;
@@ -782,24 +782,11 @@ namespace QuantConnect.Brokerages.Zerodha
                 var isEquity = string.Equals(_tradingSegment, "EQUITY", StringComparison.OrdinalIgnoreCase);
                 var segment = isEquity ? response.Equity : response.Commodity;
         
-                // In the Kite .NET SDK, Live_balance tracks intraday liquid cash.
-                // Fall back to segment.Available.Cash, then total segment.Net margin.
-                decimal liveBal = Convert.ToDecimal(segment.Available.Live_balance, CultureInfo.InvariantCulture);
                 decimal cashBal = Convert.ToDecimal(segment.Available.Cash, CultureInfo.InvariantCulture);
                 decimal netBal = Convert.ToDecimal(segment.Net, CultureInfo.InvariantCulture);
         
-                if (liveBal != 0m)
-                {
-                    amt = liveBal;
-                }
-                else if (cashBal != 0m)
-                {
-                    amt = cashBal;
-                }
-                else
-                {
-                    amt = netBal;
-                }
+                // If Cash is zero, use Net (total net available margin in Zerodha)
+                amt = cashBal != 0m ? cashBal : netBal;
             }
             catch (Exception err)
             {
