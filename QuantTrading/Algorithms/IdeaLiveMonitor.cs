@@ -30,7 +30,7 @@ namespace QuantConnect.Algorithm.CSharp
             );
 
             // Raw tick/second aggregation
-            var equity = AddEquity("IDEA", Resolution.Second, Market.India,
+            var equity = AddEquity("GOLDCASE", Resolution.Second, Market.India,
                 fillForward: true, 
                 dataNormalizationMode: DataNormalizationMode.Raw);
 
