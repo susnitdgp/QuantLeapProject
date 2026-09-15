@@ -24,7 +24,7 @@ namespace QuantConnect.Algorithm.CSharp
 
             DefaultOrderProperties = new IndiaOrderProperties(Exchange.NSE)
             {
-                ProductType = IndiaProductType.MIS
+                ProductType = IndiaOrderProperties.IndiaProductType.MIS
             };
 
             // Raw tick/second aggregation
