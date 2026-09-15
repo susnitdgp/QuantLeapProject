@@ -22,10 +22,10 @@ namespace QuantConnect.Algorithm.CSharp
             SetAccountCurrency("INR");
             SetBrokerageModel(BrokerageName.Zerodha, AccountType.Margin);
 
-            DefaultOrderProperties = new IndiaOrderProperties(Exchange.NSE)
-            {
-                ProductType = IndiaOrderProperties.IndiaProductType.MIS
-            };
+            DefaultOrderProperties = new IndiaOrderProperties(
+    Exchange.NSE, 
+    IndiaOrderProperties.IndiaProductType.MIS
+);
 
             // Raw tick/second aggregation
             var equity = AddEquity("IDEA", Resolution.Second, Market.India,
