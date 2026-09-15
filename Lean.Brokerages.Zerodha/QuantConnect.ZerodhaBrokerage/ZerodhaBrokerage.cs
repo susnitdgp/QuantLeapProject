@@ -169,9 +169,9 @@ namespace QuantConnect.Brokerages.Zerodha
                 }
             }
             //Websocket Data subscription modes. Full mode gives depth of asks and bids along with basic data.
-            var request = "{\"a\":\"subscribe\",\"v\":[" + String.Join(",", subscribeInstrumentTokens.ToArray()) + "]}";
+            //var request = "{\"a\":\"subscribe\",\"v\":[" + String.Join(",", subscribeInstrumentTokens.ToArray()) + "]}";
             var requestFullMode = "{\"a\":\"mode\",\"v\":[\"full\",[" + String.Join(",", subscribeInstrumentTokens.ToArray()) + "]]}";
-            WebSocket.Send(request);
+            //WebSocket.Send(request);
             WebSocket.Send(requestFullMode);
         }
 
